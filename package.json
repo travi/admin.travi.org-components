@@ -6,7 +6,7 @@
     "test": "grunt",
     "start": "start-storybook -p 9002",
     "build-storybook": "build-storybook -o dist/storybook",
-    "gh-pages": "grunt gh-pages"
+    "gh-pages": "grunt --stack gh-pages"
   },
   "repository": {
     "type": "git",
