@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - 6.0
+
+deploy:
+  provider: script
+  script: npm run build-storybook && npm run gh-pages
+
+env:
+  global:
+    secure: J2QEsxnJCSZZmJpV9eqABo+DyuUXOJoVFPKjhdkS2rE664WuAYtWfGKTYNhS6EqioMVPjyCqtaX76Ifw9jBBEw+ZkyIAkW7/7X6gVkoe2UZbgN3QqOtA7s14RbnvjGFNTHy0riM6vnizQTHFxWERDANRnT5Y5JLiZ+bQXkH/tVFtnMeEik5tnfHTvR1s4izqytQ+aHbAEc4uQUiJKkhZoZmMqiUncGIvCkfZd4CdZoE1L8OX6DU0E+XW1uSxmqLZmfIfQP2nQCrGrOAanOWY5iWaA5S6BLaOW0MB25I6l0TtuCB0pO+kVPTdVnGMtl0EwMXYOaWhU0rk4CMzLCUMTPRE6rKiLaU7sDCd3Fa7BzNbsMOPYGcbLcrQpofqeW6au+nA9iMTB4mKRO3QGz6KgJjscZkoEjdlRXq1x3uYy1sIZq/FJKGjsIqBeaaaUit+QsoSxLjEWwqeCZmHOkkkqEEtghszpEIETs5WBbdar6JUjeRY97EvhWayuzHn4JQ9mdr73GKxQpqQyOGQmF2ICN7zvXAgLSv6UetX5A24u81mhakeMgFhdkVMey441wbYvF2o9fD/HlRQYtDD0YdE1m58GZeazHR/XYOvUGiuhjt2nSl8SAp1/6WBgdxCbKhM+EmAxYGXqKWpqBoIVlTvmUGSJR08ngn4Rv62P8r/GL0=

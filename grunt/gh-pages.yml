@@ -1,0 +1,6 @@
+options:
+  base: dist/storybook
+  repo: 'https://<%= ghToken %>@github.com/travi/admin.travi.org-components.git'
+  user:
+    name: '<%= gitName %>'
+    email: '<%= gitEmail %>'

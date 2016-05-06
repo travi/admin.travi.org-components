@@ -1,0 +1,5 @@
+lint: scsslint
+
+verify: lint
+
+default: verify
