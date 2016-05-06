@@ -1,5 +1,6 @@
 language: node_js
 node_js:
+  - "5.10"
   - 6.0
 
 before_install: bundle install
@@ -8,6 +9,8 @@ deploy:
   skip_cleanup: true
   provider: script
   script: npm run build-storybook && npm run gh-pages
+  on:
+    node: "5.10"
 
 env:
   global:
