@@ -4,3 +4,6 @@ options:
   user:
     name: '<%= gitName %>'
     email: '<%= gitEmail %>'
+
+src:
+  - '**/*'
