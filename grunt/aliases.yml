@@ -1,4 +1,6 @@
-lint: scsslint
+lint:
+  - eslint
+  - scsslint
 
 verify: lint
 

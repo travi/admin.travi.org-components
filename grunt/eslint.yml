@@ -1,0 +1,10 @@
+options:
+  ignore: false
+
+target:
+  - "*.js"
+  - grunt/**/*.js
+  - lib/**/*.js*
+  - src/**/*.js*
+  - test/**/*.js*
+  - .storybook/**/*.js
