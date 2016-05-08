@@ -8,6 +8,8 @@ unit:
 
 test: unit
 
-verify: lint
+verify:
+  - lint
+  - test
 
 default: verify
