@@ -1,5 +1,2 @@
-options:
-  colorizeOutput: true
-
 allFiles:
   - src/**/*.scss
