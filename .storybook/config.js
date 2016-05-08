@@ -1,6 +1,6 @@
 import { configure } from '@kadira/storybook';
 
-import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+import '../src/theme/theme.scss';
 
 function loadStories() {
     require('../stories/primary-nav');
