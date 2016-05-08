@@ -1,0 +1,16 @@
+options:
+  files: test/unit/**/*-test.js*
+
+unit:
+  options:
+    reporter: spec
+
+junit:
+  options:
+    reporter: mocha-junit-reporter
+
+coverage:
+  options:
+    quiet: true
+    coveralls: true
+

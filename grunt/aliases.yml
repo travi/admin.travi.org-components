@@ -2,6 +2,12 @@ lint:
   - eslint
   - scsslint
 
+unit:
+  - env:node
+  - mochacov:unit
+
+test: unit
+
 verify: lint
 
 default: verify
