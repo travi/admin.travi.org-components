@@ -54,7 +54,7 @@
     "url-loader": "0.5.7"
   },
   "dependencies": {
-    "@travi/travi.org-theme": "git://github.com/travi/travi.org-theme.git",
+    "@travi/travi.org-theme": "0.1.1",
     "bootstrap-sass": "3.3.6",
     "react": "15.0.2",
     "react-bootstrap": "0.29.3",
