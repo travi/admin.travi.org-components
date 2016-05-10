@@ -1,6 +1,7 @@
 # React components for https://admin.travi.org
 
 [![Build Status](https://img.shields.io/travis/travi/admin.travi.org-components.svg?style=flat)](https://travis-ci.org/travi/admin.travi.org-components)
+[![bitHound Overall Score](https://www.bithound.io/github/travi/admin.travi.org-components/badges/score.svg)](https://www.bithound.io/github/travi/admin.travi.org-components)
 
 ## View the components
 
