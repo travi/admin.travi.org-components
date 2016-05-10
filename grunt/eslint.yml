@@ -7,4 +7,5 @@ target:
   - lib/**/*.js*
   - src/**/*.js*
   - test/**/*.js*
+  - stories/**/*.js*
   - .storybook/**/*.js
