@@ -4,7 +4,6 @@ options:
 target:
   - "*.js"
   - grunt/**/*.js
-  - lib/**/*.js*
   - src/**/*.js*
   - test/**/*.js*
   - stories/**/*.js*
