@@ -1,0 +1,9 @@
+options:
+  sourceMap: true
+
+dist:
+  files:
+    - expand: true
+      cwd: src
+      src: '**/*.js'
+      dest: lib

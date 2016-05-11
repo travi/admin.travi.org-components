@@ -1,0 +1,16 @@
+src/
+dist/
+stories/
+.storybook/
+test/
+node_modules/
+
+.babelrc
+.editorconfig
+.eslintrc.yml
+.gitattributes
+.nvmrc
+.scss-lint
+.travis.yml
+Gemfile*
+Gruntfile.js
