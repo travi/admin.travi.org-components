@@ -1,6 +1,6 @@
 import createPrimaryNav from '../nav/primary-nav';
 
-import '../../../../../resources/scss/theme.scss';
+import '../theme.scss';
 
 export default (React) => {
     const PrimaryNav = createPrimaryNav(React);
