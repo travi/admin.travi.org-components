@@ -2,6 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/travi/admin.travi.org-components.svg?style=flat)](https://travis-ci.org/travi/admin.travi.org-components)
 [![bitHound Overall Score](https://www.bithound.io/github/travi/admin.travi.org-components/badges/score.svg)](https://www.bithound.io/github/travi/admin.travi.org-components)
+[![bitHound](https://img.shields.io/bithound/dependencies/github/travi/admin.travi.org-components.svg?maxAge=2592000)](https://www.bithound.io/github/travi/admin.travi.org-components)
 
 [![npm](https://img.shields.io/npm/v/@travi/admin.travi.org-components.svg?maxAge=2592000)](https://www.npmjs.com/package/@travi/admin.travi.org-components)
 
