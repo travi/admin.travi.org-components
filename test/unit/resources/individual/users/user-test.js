@@ -4,31 +4,32 @@ import reactDom from 'react-dom/server';
 import cheerio from 'cheerio';
 import microformats from 'microformat-node';
 import any from '@travi/any';
-import assert from 'assert';
+import {assert} from 'chai';
+import skinDeep from 'skin-deep';
 
 import createUser from '../../../../../src/resources/individual/users/user';
 const User = createUser(React);
 
 suite('user component test', () => {
+    const user = {
+        id: any.string(),
+        displayName: any.string(),
+        name: {
+            first: any.string(),
+            last: any.string()
+        },
+        avatar: {
+            src: any.url(),
+            size: any.integer()
+        }
+    };
+
     test('that displayName is set', () => {
         assert.equal(User.displayName, 'User');
     });
 
     test('that the resource is displayed', () => {
-        const data = {
-                user: {
-                    id: any.string(),
-                    displayName: any.string(),
-                    name: {
-                        first: any.string(),
-                        last: any.string()
-                    },
-                    avatar: {
-                        src: any.url(),
-                        size: any.integer()
-                    }
-                }
-            },
+        const data = {user},
 
             $ = cheerio.load(reactDom.renderToStaticMarkup(
                 <User {...data} />
@@ -50,5 +51,11 @@ suite('user component test', () => {
             assert.equal(hCard.properties['given-name'], data.user.name.first);
             assert.equal(hCard.properties['family-name'], data.user.name.last);
         });
+    });
+
+    test('that the page title is set', () => {
+        const tree = skinDeep.shallowRender(<User user={user} />);
+
+        assert.isObject(tree.subTree('HelmetWrapper', {title: user.displayName}));
     });
 });

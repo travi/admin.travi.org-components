@@ -24,7 +24,8 @@ suite('wrapper component', () => {
         assert.equal(result.type, 'div');
         assert.equal(result.props.className, 'container');
 
+        assert.isObject(tree.subTree('HelmetWrapper', {titleTemplate: '%s | Travi.org Admin'}));
         assert.isObject(tree.subTree('PrimaryNav', {primaryNav}));
-        assert.equal(tree.props.children[1], children);
+        assert.equal(tree.props.children[2], children);
     });
 });
