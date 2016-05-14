@@ -1,5 +1,7 @@
 import Helmet from 'react-helmet';
 
+import './_h-card.scss';
+
 export default (React) => {
     function User({user}) {
         const avatar = user.avatar;

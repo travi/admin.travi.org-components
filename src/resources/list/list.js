@@ -1,6 +1,8 @@
 import {Link} from 'react-router';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
 
+import './_resourceLists.scss';
+
 export default (React) => {
     function ResourceList({resources}) {
         return (
