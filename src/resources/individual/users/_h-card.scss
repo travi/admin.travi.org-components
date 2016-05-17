@@ -1,9 +1,11 @@
 @import '~@travi/travi.org-theme/scss/lists/placeholders';
 
-.h-card dl {
-  @extend %inline-dl;
+.h-card {
+  dl {
+    @extend %inline-dl;
 
-  dd {
-    margin: 20px;
+    dd {
+      margin: 20px;
+    }
   }
 }

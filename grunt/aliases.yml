@@ -5,7 +5,7 @@ build:
 
 lint:
   - eslint
-  - scsslint
+  - sasslint
 
 unit:
   - env:node

@@ -6,7 +6,7 @@ module.exports = function (grunt) {
         jitGrunt: {
             staticMappings: {
                 mochacov: 'grunt-mocha-cov',
-                scsslint: 'grunt-scss-lint'
+                sasslint: 'grunt-sass-lint'
             }
         },
         config: {
