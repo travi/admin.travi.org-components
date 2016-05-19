@@ -1,4 +1,4 @@
-/*eslint filenames/filenames: "off" */
+/*eslint filenames/match-regex: "off" */
 
 module.exports = function (grunt) {
     require('time-grunt')(grunt);
