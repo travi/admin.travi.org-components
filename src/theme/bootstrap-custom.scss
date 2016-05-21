@@ -1,6 +1,11 @@
+@import '~@travi/travi.org-theme/scss/colors';
+@import '~@travi/travi.org-theme/scss/typography/variables';
+
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 $navbar-default-brand-color: $theme-white;
 $navbar-default-link-color: $text-white;
 $navbar-default-bg: $theme-primary;
 $navbar-default-link-active-color: $grey-light;
+
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';

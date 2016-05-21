@@ -1,5 +1,6 @@
 import { configure } from '@kadira/storybook';
 
+import '../src/theme/bootstrap-custom.scss';
 import '../src/theme/theme.scss';
 
 function loadStories() {

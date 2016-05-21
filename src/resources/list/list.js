@@ -1,7 +1,7 @@
 import {Link} from 'react-router';
 import {ListGroup, ListGroupItem} from 'react-bootstrap';
 
-import './_resourceLists.scss';
+import styles from './_resourceLists.scss';
 
 export default (React) => {
     function ResourceList({resources}) {
@@ -9,7 +9,7 @@ export default (React) => {
             <ListGroup>{ resources.map((resource) => (
                 <ListGroupItem key={resource.id}>{(() => {
                     if (resource.thumbnail) {
-                        return <img src={resource.thumbnail.src} className="thumbnail"/>;
+                        return <img src={resource.thumbnail.src} className={styles.thumbnail}/>;
                     } else {
                         return '';
                     }

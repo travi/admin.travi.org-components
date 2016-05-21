@@ -7,9 +7,7 @@ lint:
   - eslint
   - sasslint
 
-unit:
-  - env:node
-  - mochacov:unit
+unit: mochacov:unit
 
 test: unit
 

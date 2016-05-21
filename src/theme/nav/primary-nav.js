@@ -2,7 +2,7 @@ import {IndexLink} from 'react-router';
 import {Navbar, NavItem, Nav} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 
-import './_navbar.scss';
+import styles from './_navbar.scss';
 
 export default (React) => {
     function PrimaryNav({primaryNav}) {
@@ -10,7 +10,9 @@ export default (React) => {
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <h1><IndexLink className="navbar-brand" to="/">Travi</IndexLink></h1>
+                        <h1 className={styles['site-title']}>
+                            <IndexLink className={styles['navbar-brand']} to="/">Travi</IndexLink>
+                        </h1>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>

@@ -1,13 +1,13 @@
 import Helmet from 'react-helmet';
 
-import './_h-card.scss';
+import styles from './_h-card.scss';
 
 export default (React) => {
     function User({user}) {
         const avatar = user.avatar;
 
         return (
-            <div className="resource h-card panel panel-default">
+            <div className={`resource h-card panel panel-default ${styles['h-card']}`}>
                 <Helmet title={user.displayName}/>
                 <h3 className="p-name panel-heading">{user.displayName}</h3>
                 <div className="container-fluid panel-body">

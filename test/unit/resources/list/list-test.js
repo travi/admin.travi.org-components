@@ -4,6 +4,7 @@ import skinDeep from 'skin-deep';
 import {assert} from 'chai';
 import any from '@travi/any';
 
+import styles from '../../../helpers/style-fakes';
 import createResourceList from '../../../../src/resources/list/list';
 const ResourceList = createResourceList(React);
 
@@ -23,7 +24,7 @@ function assertLinkRendersWhenSelfLinkIsDefined(listItem, resource) {
 function assertThumbnailRendersWhenDefined(listItem, resource) {
     assert.isObject(listItem.subTree('img', {
         src: resource.thumbnail.src,
-        className: 'thumbnail'
+        className: styles.thumbnail
     }));
 }
 
