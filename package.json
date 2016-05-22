@@ -52,7 +52,7 @@
     "grunt-sass-lint": "0.2.0",
     "load-grunt-config": "0.19.2",
     "node-sass": "3.7.0",
-    "react-addons-test-utils": "15.0.2",
+    "react-addons-test-utils": "15.1.0",
     "react-helmet": "3.1.0",
     "sass-loader": "3.2.0",
     "skin-deep": "0.16.0",
