@@ -4,7 +4,7 @@ import reactDom from 'react-dom/server';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import createNotFound from '../../../src/errors/not-found';
+import {createNotFound} from '../../../src/main';
 
 suite('not found', () => {
     const NotFound = createNotFound(React);

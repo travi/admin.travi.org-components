@@ -6,7 +6,7 @@ import any from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import createResource from '../../../../src/resources/individual/resource';
+import {createResource} from '../../../../src/main';
 const Resource = createResource(React);
 
 suite('resource component test', () => {

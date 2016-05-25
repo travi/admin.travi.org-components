@@ -4,7 +4,7 @@ import skinDeep from 'skin-deep';
 import {assert} from 'chai';
 import any from '@travi/any';
 
-import createMaybeList from '../../../../src/resources/list/maybe-list';
+import {createMaybeList} from '../../../../src/main';
 const MaybeList = createMaybeList(React);
 
 suite('maybe-list component', () => {

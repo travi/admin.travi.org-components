@@ -5,7 +5,7 @@ import {assert} from 'chai';
 import any from '@travi/any';
 
 import styles from '../../../helpers/style-fakes';
-import createResourceList from '../../../../src/resources/list/list';
+import {createResourceList} from '../../../../src/main';
 const ResourceList = createResourceList(React);
 
 function assertSimpleResourceRenders(listItem, resource) {

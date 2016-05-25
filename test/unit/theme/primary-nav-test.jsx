@@ -6,7 +6,7 @@ import cheerio from 'cheerio';
 import {assert} from 'chai';
 
 import HistoryWrapper from '../../helpers/history-wrapper';
-import createPrimaryNav from '../../../src/theme/nav/primary-nav';
+import {createPrimaryNav} from '../../../src/main';
 
 const PrimaryNav = createPrimaryNav(React);
 

@@ -7,7 +7,7 @@ import any from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import createUser from '../../../../../src/resources/individual/users/user';
+import {createUser} from '../../../../../src/main';
 const User = createUser(React);
 
 suite('user component test', () => {

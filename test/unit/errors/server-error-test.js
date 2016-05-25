@@ -4,10 +4,10 @@ import reactDom from 'react-dom/server';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import createNotFound from '../../../src/errors/server-error';
+import {createServerError} from '../../../src/main';
 
 suite('server error', () => {
-    const ServerError = createNotFound(React);
+    const ServerError = createServerError(React);
 
     test('that displayName is set', () => {
         assert.equal(ServerError.displayName, 'ServerError');

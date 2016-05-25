@@ -26,6 +26,7 @@
     "url": "https://github.com/travi/admin.travi.org-components/issues"
   },
   "homepage": "https://github.com/travi/admin.travi.org-components#readme",
+  "main": "lib/main.js",
   "devDependencies": {
     "@kadira/storybook": "1.20.0",
     "@travi/any": "0.1.1",

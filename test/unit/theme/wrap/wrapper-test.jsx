@@ -4,7 +4,7 @@ import any from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import createWrap from '../../../../src/theme/wrap/wrap';
+import {createWrap} from '../../../../src/main';
 
 suite('wrapper component', () => {
     const Wrap = createWrap(React);
