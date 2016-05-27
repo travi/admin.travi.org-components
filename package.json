@@ -65,7 +65,7 @@
   "dependencies": {
     "@travi/travi.org-theme": "0.1.1",
     "bootstrap-sass": "3.3.6",
-    "microformat-node": "1.2.0",
+    "microformat-node": "2.0.0",
     "react-bootstrap": "0.29.4",
     "react-dom": "15.1.0",
     "react-router": "2.4.1",
