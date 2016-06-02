@@ -1,6 +1,7 @@
 # React components for https://admin.travi.org
 
 [![Build Status](https://img.shields.io/travis/travi/admin.travi.org-components.svg?style=flat)](https://travis-ci.org/travi/admin.travi.org-components)
+[![Coverage Status](http://img.shields.io/coveralls/travi/admin.travi.org-components.svg?style=flat)](https://coveralls.io/r/travi/admin.travi.org-components?branch=master)
 [![bitHound Overall Score](https://www.bithound.io/github/travi/admin.travi.org-components/badges/score.svg)](https://www.bithound.io/github/travi/admin.travi.org-components)
 [![bitHound](https://img.shields.io/bithound/dependencies/github/travi/admin.travi.org-components.svg?maxAge=2592000)](https://www.bithound.io/github/travi/admin.travi.org-components)
 
