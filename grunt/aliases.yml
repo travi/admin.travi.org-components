@@ -7,7 +7,7 @@ lint:
   - eslint
   - sasslint
 
-unit: mochacov:unit
+unit: mocha_istanbul:unit
 
 test: unit
 

@@ -5,7 +5,6 @@ module.exports = function (grunt) {
     require('load-grunt-config')(grunt, {
         jitGrunt: {
             staticMappings: {
-                mochacov: 'grunt-mocha-cov',
                 sasslint: 'grunt-sass-lint'
             }
         },
@@ -14,5 +13,14 @@ module.exports = function (grunt) {
             gitEmail: process.env.GIT_EMAIL,
             ghToken: process.env.GH_TOKEN
         }
+    });
+
+    grunt.event.on('coverage', (lcov, done) => {
+        require('coveralls').handleInput(lcov, (err) => {
+            if (err) {
+                return done(err);
+            }
+            return done();
+        });
     });
 };
