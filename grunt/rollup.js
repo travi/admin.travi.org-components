@@ -1,19 +1,20 @@
-var babel = require('rollup-plugin-babel');
-var glob = require('glob');
-var path = require('path');
+import babel from 'rollup-plugin-babel';
+import glob from 'glob';
+import path from 'path';
 
 module.exports = {
     es5: {
         options: {
             format: 'cjs',
             sourceMap: true,
-            plugins: function () {
+            plugins() {
                 return [
                     {
-                        transform: ( code, id ) => {
-                            if ( path.extname( id ) === '.scss' ) {
-                                return { code: `export default styles = {}`, map: { mappings: '' } };
+                        transform: (code, id) => {
+                            if ('.scss' === path.extname(id)) {
+                                return {code: 'export default styles = {}', map: {mappings: ''}};
                             }
+                            return null;
                         }
                     },
                     babel({
@@ -32,10 +33,10 @@ module.exports = {
         options: {
             format: 'cjs',
             sourceMap: true,
-            external: glob.sync('**/*.scss', {cwd: 'src'}).map(function (file) {
-                return require.resolve(__dirname + '/../src/' + file);
+            external: glob.sync('**/*.scss', {cwd: 'src'}).map((file) => {
+                return require.resolve(`${__dirname}/../src/${file}`);
             }),
-            plugins: function () {
+            plugins() {
                 return [
                     babel({
                         babelrc: false,
