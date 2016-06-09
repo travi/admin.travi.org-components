@@ -1,8 +1,9 @@
 language: node_js
 node_js:
-  - '5.10'
-  - 6.0
+- '5.10'
+- 6.0
 deploy:
+  matrix:
   - skip_cleanup: true
     provider: script
     script: npm run build-storybook && npm run gh-pages
@@ -14,8 +15,8 @@ deploy:
       node: 6.0
       tags: true
       repo: travi/admin.travi.org-components
-    api_key:
-      secure: Ipkuu7S7+ry+r+ErlI/5AMF58XcgACBqGGnqc5fedF0kabxe9ImlSpd47G6IZTtf6TAtQVId7V6qx/W+Z8SurtWK0XMwYwPgTo9JK3jxU2bfDSPlp/NZB2q8r0iqzQcusBiiX7BDt06MgNVK4JnjAL4E1NX4jNa7RZhYpHKZ3fody/nBJUysc6/Z5p6pLAf7BgUS5cyR6xXCnGkGQzpySl6PNX31eltnyvhnYSQ+HhUhp+Ii1euOp7G1c36FlzNs0/Ax1UOrZB6AyJawTvMW0uENDH4R/hGfEetUKjWI2kpGFgAhDPjrJps0Q9kfljofWJsmrY/gZMvJm/udDIs+GP+Aq1r+beJHCE3ms8pQnIS/+HyU59jK/LVqBvv5f55ktoDTSvJFWXfNRSuSYRqGONJVAWyForN/SJMu6/nZ0ewNQT5L2wzDzFg7cLfjmjXKN8TyvUgacV2lPh5LT4gYMXwIgAN2tQ3jGtukGN0eKUObi1Dkf+yjN0HpEmmxTRuhABnRb/rY9SLce8osnH41kL/k7L8I/cYv5W7N3QTlDHoZScrnavEFjgwi99RwR4J4OR/4EtsuXtq+ICdkOfwu1Vo4LPG69U2FSJ38/nsiSTDAFt8OnSBa3Zadi7LfBGADYur5RZyb3dGbnCu1PM3cwqjrFsJ+HyHQ2LQ9ia4QFB0=
+  api_key:
+    secure: IGXm3VTSwG1uowt8X/eAgORQ8vkYd0RmkpxqLSWIziJC23yW+st1Atab80gKkqS/bLsIhtgC+x082IE4RtVtLWrd/JNSPZLE8Kn45KcYKPWgueQGwB4P4f8J+WeYma/G81GGAZLBD24+z4KuAcxPtkFQ877ZZBIoONdVqb6Eo1mlcMohOZTuYGXazMxICFWLeZVk+fHeMQGKR0/Y/h6oz57b7Z1mprY3iO72/+H3CSFeBJzFVl6sCnzqfidXfWhgXAPsORaUjomQIzcCLvkr1Xfy9uKdfK+B8IMEDNHh4d6RlbCq/r9PGHvx30puOFDaJrLK7AFBbp3aQQZoGv69ZavdOemXp+/4H5yGSqQIyGMXBr7QscNaYk/4e/8EltqDUVRGEErqbBSuLTIhK7ZLQvRFC+Byy+nN4ihUulJU7IOQVo2ThoSUqe0Le4d3JCuyxAbIkH8/SwZbMcF2DRz4FefQpPZ8+hrgNOsgq7u2xAl1zv1d4vyWnyatMJcY2f1LqjiEhi/o3UI73h7sC5FO0A571yDcv4tSJIexCYWJK9f9WS34NheljX2mXt9a5viCPOqA7/8L/c1tTohuFd0F7OKGyHHTJJYssHIMWGf1xtnUUWiozHhu1PZbapOrZkaD77bSJreFM363QmaYSoQKwTm+Y+uUXjHWctWa+a/vDQw=
 env:
   global:
     secure: J2QEsxnJCSZZmJpV9eqABo+DyuUXOJoVFPKjhdkS2rE664WuAYtWfGKTYNhS6EqioMVPjyCqtaX76Ifw9jBBEw+ZkyIAkW7/7X6gVkoe2UZbgN3QqOtA7s14RbnvjGFNTHy0riM6vnizQTHFxWERDANRnT5Y5JLiZ+bQXkH/tVFtnMeEik5tnfHTvR1s4izqytQ+aHbAEc4uQUiJKkhZoZmMqiUncGIvCkfZd4CdZoE1L8OX6DU0E+XW1uSxmqLZmfIfQP2nQCrGrOAanOWY5iWaA5S6BLaOW0MB25I6l0TtuCB0pO+kVPTdVnGMtl0EwMXYOaWhU0rk4CMzLCUMTPRE6rKiLaU7sDCd3Fa7BzNbsMOPYGcbLcrQpofqeW6au+nA9iMTB4mKRO3QGz6KgJjscZkoEjdlRXq1x3uYy1sIZq/FJKGjsIqBeaaaUit+QsoSxLjEWwqeCZmHOkkkqEEtghszpEIETs5WBbdar6JUjeRY97EvhWayuzHn4JQ9mdr73GKxQpqQyOGQmF2ICN7zvXAgLSv6UetX5A24u81mhakeMgFhdkVMey441wbYvF2o9fD/HlRQYtDD0YdE1m58GZeazHR/XYOvUGiuhjt2nSl8SAp1/6WBgdxCbKhM+EmAxYGXqKWpqBoIVlTvmUGSJR08ngn4Rv62P8r/GL0=
