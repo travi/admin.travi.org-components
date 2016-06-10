@@ -1,9 +1,8 @@
 language: node_js
 node_js:
-- '5.10'
-- 6.0
+  - '5.10'
+  - 6.0
 deploy:
-  matrix:
   - skip_cleanup: true
     provider: script
     script: npm run build-storybook && npm run gh-pages
