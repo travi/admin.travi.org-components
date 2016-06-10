@@ -1,6 +1,7 @@
 build:
   - clean
   - rollup
+  - copy:scss
 
 lint:
   - eslint
