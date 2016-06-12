@@ -2,7 +2,7 @@ import React from 'react';
 
 import skinDeep from 'skin-deep';
 import {assert} from 'chai';
-import any from '@travi/any';
+import {string, url} from '@travi/any';
 
 import styles from '../../../helpers/style-fakes';
 import {createResourceList} from '../../../../src/main';
@@ -31,25 +31,25 @@ function assertThumbnailRendersWhenDefined(listItem, resource) {
 suite('resource list component', () => {
     const resources = [
         {
-            id: any.string(),
-            displayName: any.string(),
+            id: string(),
+            displayName: string(),
             links: {}
         },
         {
-            id: any.string(),
-            displayName: any.string(),
+            id: string(),
+            displayName: string(),
             links: {
                 self: {
-                    href: any.url()
+                    href: url()
                 }
             }
         },
         {
-            id: any.string(),
-            displayName: any.string(),
+            id: string(),
+            displayName: string(),
             links: {},
             thumbnail: {
-                src: any.url()
+                src: url()
             }
         }
     ];

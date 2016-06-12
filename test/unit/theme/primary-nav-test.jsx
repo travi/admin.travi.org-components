@@ -1,4 +1,4 @@
-import any from '@travi/any';
+import {string, url, listOf} from '@travi/any';
 
 import React from 'react';
 import dom from 'react-dom/server';
@@ -17,10 +17,10 @@ suite('primary navigation', () => {
 
     test('that the resource types are listed as links', () => {
         const
-            primaryNav = any.listOf(() => {
+            primaryNav = listOf(() => {
                 return {
-                    text: any.string(),
-                    path: any.url()
+                    text: string(),
+                    path: url()
                 };
             }),
 

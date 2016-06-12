@@ -2,7 +2,7 @@ import React from 'react';
 
 import skinDeep from 'skin-deep';
 import {assert} from 'chai';
-import any from '@travi/any';
+import {string, simpleObject, listOf} from '@travi/any';
 
 import {createMaybeList} from '../../../../src/main';
 const MaybeList = createMaybeList(React);
@@ -14,7 +14,7 @@ suite('maybe-list component', () => {
 
     test('that message is displayed if the resource list is empty', () => {
         const
-            resourceType = any.string(),
+            resourceType = string(),
 
             tree = skinDeep.shallowRender(React.createElement(MaybeList, {
                 resources: [],
@@ -30,8 +30,8 @@ suite('maybe-list component', () => {
 
     test('that list is rendered when not empty', () => {
         const
-            resourceType = any.string(),
-            resources = any.listOf(any.simpleObject),
+            resourceType = string(),
+            resources = listOf(simpleObject),
 
             tree = skinDeep.shallowRender(React.createElement(MaybeList, {resources, resourceType})),
             list = tree.dive(['ConditionalList']);

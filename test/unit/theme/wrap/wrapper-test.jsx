@@ -1,6 +1,6 @@
 import React from 'react';
 
-import any from '@travi/any';
+import {listOf, simpleObject} from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
@@ -15,7 +15,7 @@ suite('wrapper component', () => {
 
     test('that the layout markup is correct', () => {
         const
-            primaryNav = any.listOf(any.simpleObject),
+            primaryNav = listOf(simpleObject),
             children = 'foo',
 
             tree = skinDeep.shallowRender(React.createElement(Wrap, {primaryNav}, children)),

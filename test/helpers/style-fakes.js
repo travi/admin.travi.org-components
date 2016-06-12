@@ -1,5 +1,3 @@
-import any from '@travi/any';
+import {objectWithKeys, word} from '@travi/any';
 
-export default {
-    thumbnail: any.word()
-};
+export default objectWithKeys(['thumbnail'], {factory: word});
