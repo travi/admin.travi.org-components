@@ -3,7 +3,7 @@ import reactDom from 'react-dom/server';
 
 import cheerio from 'cheerio';
 import microformats from 'microformat-node';
-import any from '@travi/any';
+import {string, integer, url} from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
@@ -12,15 +12,15 @@ const User = createUser(React);
 
 suite('user component test', () => {
     const user = {
-        id: any.string(),
-        displayName: any.string(),
+        id: string(),
+        displayName: string(),
         name: {
-            first: any.string(),
-            last: any.string()
+            first: string(),
+            last: string()
         },
         avatar: {
-            src: any.url(),
-            size: any.integer()
+            src: url(),
+            size: integer()
         }
     };
 

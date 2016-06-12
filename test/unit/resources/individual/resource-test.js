@@ -2,7 +2,7 @@ import React from 'react';
 import reactDom from 'react-dom/server';
 
 import cheerio from 'cheerio';
-import any from '@travi/any';
+import {string} from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
@@ -10,7 +10,7 @@ import {createResource} from '../../../../src/main';
 const Resource = createResource(React);
 
 suite('resource component test', () => {
-    const resource = {id: any.string(), displayName: any.string()};
+    const resource = {id: string(), displayName: string()};
 
     test('that displayName is set', () => {
         assert.equal(Resource.displayName, 'Resource');
