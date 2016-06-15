@@ -1,7 +1,6 @@
 import babel from 'rollup-plugin-babel';
 import glob from 'glob';
 import path from 'path';
-import {word} from '@travi/any';
 
 module.exports = {
     es5: {
@@ -13,7 +12,7 @@ module.exports = {
                     {
                         transform: (code, id) => {
                             if ('.scss' === path.extname(id)) {
-                                return {code: `const styles = {}; export default styles;`, map: {mappings: ''}};
+                                return {code: 'const styles = {}; export default styles;', map: {mappings: ''}};
                             }
                             return null;
                         }
