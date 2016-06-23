@@ -63,7 +63,7 @@
     "react": "15.1.0",
     "react-addons-test-utils": "15.1.0",
     "react-helmet": "3.1.0",
-    "rollup-plugin-babel": "2.5.1",
+    "rollup-plugin-babel": "2.6.0",
     "sass-loader": "3.2.1",
     "skin-deep": "0.16.0",
     "style-loader": "0.13.1",
