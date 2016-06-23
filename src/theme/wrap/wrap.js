@@ -3,7 +3,6 @@ import Helmet from 'react-helmet';
 import createPrimaryNav from '../nav/primary-nav';
 
 import '../bootstrap-custom.scss';
-import '../theme.scss';
 
 export default (React) => {
     const PrimaryNav = createPrimaryNav(React);

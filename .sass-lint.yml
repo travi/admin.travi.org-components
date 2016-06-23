@@ -1,2 +1,3 @@
 rules:
   force-element-nesting: 2
+  force-pseudo-nesting: 2

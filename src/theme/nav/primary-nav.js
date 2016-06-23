@@ -7,7 +7,7 @@ import styles from './_navbar.scss';
 export default (React) => {
     function PrimaryNav({primaryNav}) {
         return (
-            <Navbar>
+            <Navbar className={styles.navbar} >
                 <Navbar.Header>
                     <Navbar.Brand>
                         <h1 className={styles['site-title']}>

@@ -1,9 +1,24 @@
+@import '~@travi/travi.org-theme/scss/colors';
+@import '~@travi/travi.org-theme/scss/typography/variables';
+@import '~@travi/travi.org-theme/scss/headings/placeholders';
+
 .site-title {
   margin: 0;
 }
 
-h1 {
-  .navbar-brand {
-    float: none;
+.navbar {
+  h1 {
+    @extend %h1;
+
+    a {
+      &:visited,
+      &:active {
+        @extend %h1;
+      }
+    }
+
+    .navbar-brand {
+      float: none;
+    }
   }
 }
