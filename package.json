@@ -51,7 +51,7 @@
     "grunt-contrib-clean": "1.0.0",
     "grunt-contrib-copy": "1.0.0",
     "grunt-env": "0.4.4",
-    "grunt-eslint": "18.1.0",
+    "grunt-eslint": "19.0.0",
     "grunt-gh-pages": "1.1.0",
     "grunt-mocha-istanbul": "5.0.1",
     "grunt-rollup": "0.7.1",
