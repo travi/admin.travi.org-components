@@ -22,6 +22,10 @@ export default (React) => {
     }
 
     MaybeList.displayName = 'MaybeResourceList';
+    MaybeList.propTypes = {
+        resources: React.PropTypes.array.isRequired,
+        resourceType: React.PropTypes.string.isRequired
+    };
 
     return MaybeList;
 };
