@@ -12,7 +12,7 @@
 
     a {
       @extend %h1;
-        
+
       &:visited,
       &:active {
         @extend %h1;
