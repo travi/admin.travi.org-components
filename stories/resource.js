@@ -1,12 +1,12 @@
 import React from 'react';
 import {storiesOf} from '@kadira/storybook';
 import createResource from '../src/resources/individual/resource';
-import createUser from '../src/resources/individual/users/user';
+import createPerson from '../src/resources/individual/persons/person';
 
 const
     Resource = createResource(React),
-    User = createUser(React),
-    user = {
+    Person = createPerson(React),
+    person = {
         id: 1,
         name: {
             first: 'Matt',
@@ -22,4 +22,4 @@ const
 
 storiesOf('Resource Details', module)
     .add('resource', () => <Resource resource={{displayName: 'resource'}}/>)
-    .add('user', () => <User user={user}/>);
+    .add('person', () => <Person person={person}/>);
