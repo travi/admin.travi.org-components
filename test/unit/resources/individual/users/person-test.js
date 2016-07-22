@@ -7,8 +7,8 @@ import {string, word, integer, url} from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import {createUser} from '../../../../../src/main';
-const User = createUser(React);
+import {createPerson} from '../../../../../src/main';
+const User = createPerson(React);
 
 suite('person component test', () => {
     const person = {

@@ -6,7 +6,7 @@ import createServerError from './errors/server-error';
 import createResourceList from './resources/list/list';
 import createMaybeList from './resources/list/maybe-list';
 import createResource from './resources/individual/resource';
-import createUser from './resources/individual/persons/person';
+import createPerson from './resources/individual/persons/person';
 
 export {
     createIndex,
@@ -17,5 +17,5 @@ export {
     createResourceList,
     createMaybeList,
     createResource,
-    createUser
+    createPerson
 };
