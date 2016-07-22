@@ -29,10 +29,10 @@
   "main": "lib/main.js",
   "browser": "lib/browser.js",
   "devDependencies": {
-    "@kadira/storybook": "1.37.0",
+    "@kadira/storybook": "1.39.0",
     "@travi/any": "0.6.0",
     "@travi/eslint-config-travi": "0.2.0",
-    "babel-cli": "6.10.1",
+    "babel-cli": "6.11.4",
     "babel-core": "6.11.4",
     "babel-loader": "6.2.4",
     "babel-plugin-transform-require-ignore": "0.0.2",
@@ -72,7 +72,7 @@
     "webpack-hot-middleware": "2.12.1"
   },
   "dependencies": {
-    "@kadira/react-storybook-addon-info": "3.0.10",
+    "@kadira/react-storybook-addon-info": "3.1.1",
     "@travi/travi.org-theme": "0.2.0",
     "bootstrap-sass": "3.3.6",
     "microformat-node": "2.0.0",
