@@ -61,7 +61,7 @@
     "mocha": "2.5.3",
     "node-sass": "3.8.0",
     "react": "15.2.1",
-    "react-addons-test-utils": "15.2.1",
+    "react-addons-test-utils": "15.3.0",
     "react-helmet": "3.1.0",
     "rollup-plugin-babel": "2.6.1",
     "sass-loader": "4.0.0",
