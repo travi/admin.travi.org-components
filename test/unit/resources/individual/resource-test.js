@@ -1,10 +1,9 @@
 import React from 'react';
-import reactDom from 'react-dom/server';
+import Helmet from 'react-helmet';
 
-import cheerio from 'cheerio';
 import {string} from '@travi/any';
 import {assert} from 'chai';
-import skinDeep from 'skin-deep';
+import {shallow} from 'enzyme';
 
 import {createResource} from '../../../../src/main';
 const Resource = createResource(React);
@@ -17,16 +16,14 @@ suite('resource component test', () => {
     });
 
     test('that the resource is displayed', () => {
-        const $ = cheerio.load(reactDom.renderToStaticMarkup(
-            <Resource resource={resource} />
-        ));
+        const
+            wrapper = shallow(<Resource resource={resource} />),
+            heading = wrapper.find('h3');
 
-        assert.equal($('h3').text(), resource.displayName);
-    });
-
-    test('that the page title is set', () => {
-        const tree = skinDeep.shallowRender(<Resource resource={resource} />);
-
-        assert.isObject(tree.subTree('HelmetWrapper', {title: resource.displayName}));
+        assert.equal(heading.text(), `<HelmetWrapper />${resource.displayName}`);
+        assert.isTrue(
+            heading.contains(<Helmet title={resource.displayName} />),
+            `expected the title to be set to '${resource.displayName}' using helmet`
+        );
     });
 });
