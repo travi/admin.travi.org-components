@@ -1,6 +1,6 @@
 {
   "name": "@travi/admin.travi.org-components",
-  "version": "0.8.2",
+  "version": "0.9.0",
   "description": "React components for https://admin.travi.org",
   "scripts": {
     "test": "grunt",
