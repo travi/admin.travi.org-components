@@ -1,4 +1,5 @@
 import React from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {storiesOf} from '@kadira/storybook';
 import createResource from '../src/resources/individual/resource';
 import createPerson from '../src/resources/individual/persons/person';
@@ -21,5 +22,11 @@ const
     };
 
 storiesOf('Resource Details', module)
-    .add('resource', () => <Resource resource={{displayName: 'resource'}}/>)
+    .addDecorator((story) => (
+        <MuiThemeProvider>
+            {story()}
+        </MuiThemeProvider>
+    ))
+    .add('resource', () => <Resource resource={{displayName: 'resource'}} loading={false} />)
+    .add('loading', () => <Resource resource={{displayName: 'resource'}} loading={true} />)
     .add('person', () => <Person person={person}/>);

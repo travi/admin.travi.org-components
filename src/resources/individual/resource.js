@@ -1,14 +1,17 @@
 import Helmet from 'react-helmet';
+import CircularProgress from 'material-ui/CircularProgress';
 
 export default (React) => {
-    function Resource({resource}) {
+    function Resource({resource, loading}) {
         return (
-            <h3>
+            <div>
                 <Helmet title={resource.displayName}/>
-                {resource.displayName}
-            </h3>
+                {loading || <h3>{resource.displayName}</h3>}
+                {loading && <CircularProgress color={'#c80000'} />}
+            </div>
         );
     }
+
     Resource.displayName = 'Resource';
 
     return Resource;
