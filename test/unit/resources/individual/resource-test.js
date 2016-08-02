@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import CircularProgress from 'material-ui/CircularProgress';
+import PageLoading from '../../../../src/atoms/loading-indicators/page';
 
 import {string} from '@travi/any';
 import {assert} from 'chai';
@@ -25,7 +25,7 @@ suite('resource component test', () => {
             `expected the title to be set to '${resource.displayName}' using helmet`
         );
         assert.isFalse(
-            wrapper.containsMatchingElement(<CircularProgress />),
+            wrapper.containsMatchingElement(<PageLoading />),
             'expected loading indicator to be hidden'
         );
     });
@@ -34,7 +34,7 @@ suite('resource component test', () => {
         const wrapper = shallow(<Resource resource={resource} loading={true} />);
 
         assert.isTrue(
-            wrapper.contains(<CircularProgress color={'#c80000'} />),
+            wrapper.contains(<PageLoading />),
             'expected loading indicator to be displayed'
         );
         assert.isTrue(

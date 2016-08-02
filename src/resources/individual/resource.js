@@ -1,5 +1,5 @@
 import Helmet from 'react-helmet';
-import CircularProgress from 'material-ui/CircularProgress';
+import PageLoading from '../../atoms/loading-indicators/page';
 
 export default (React) => {
     function Resource({resource, loading}) {
@@ -7,7 +7,7 @@ export default (React) => {
             <div>
                 <Helmet title={resource.displayName}/>
                 {loading || <h3>{resource.displayName}</h3>}
-                {loading && <CircularProgress color={'#c80000'} />}
+                {loading && <PageLoading />}
             </div>
         );
     }

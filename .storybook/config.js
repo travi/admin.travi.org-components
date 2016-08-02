@@ -5,7 +5,13 @@ setAddon(infoAddon);
 
 import '../src/theme/bootstrap-custom.scss';
 
+function loadAtoms() {
+    require('../stories/atoms/loading-indicators.js');
+}
+
 function loadStories() {
+    loadAtoms();
+
     require('../stories/primary-nav');
     require('../stories/index');
     require('../stories/resource-list');
