@@ -1,20 +1,31 @@
 import React from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {storiesOf} from '@kadira/storybook';
 import createResourceList from '../src/resources/list/maybe-list';
 
 const ResourceList = createResourceList(React);
 
 storiesOf('Resource List', module)
+    .addDecorator((story) => (
+        <MuiThemeProvider>
+            {story()}
+        </MuiThemeProvider>
+    ))
     .addWithInfo(
         'empty list',
         'this is the empty state',
-        () => <ResourceList resourceType="foo" resources={[]}/>
+        () => <ResourceList resourceType="foo" resources={[]} loading={false} />
+    )
+    .addWithInfo(
+        'loading',
+        'this is the loading state',
+        () => <ResourceList resourceType="foo" resources={[]} loading={true} />
     )
     .addWithInfo(
         'rides list',
         'list of rides',
         () => (
-            <ResourceList resourceType="rides" resources={[
+            <ResourceList resourceType="rides" loading={false} resources={[
                 { id: 1, displayName: 'corvette', links: [] },
                 { id: 2, displayName: 'truck', links: [] },
                 { id: 3, displayName: 'camaro', links: [] }
@@ -25,7 +36,7 @@ storiesOf('Resource List', module)
         'users list',
         'list of users',
         () => (
-            <ResourceList resourceType="users" resources={[
+            <ResourceList resourceType="users" loading={false} resources={[
                 {
                     id: 1,
                     displayName: 'Matt Travi',

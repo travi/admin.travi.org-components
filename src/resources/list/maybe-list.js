@@ -1,5 +1,6 @@
 import Helmet from 'react-helmet';
 import createResourceList from './list.js';
+import PageLoading from '../../../src/atoms/loading-indicators/page';
 
 export default (React) => {
     const ResourceList = createResourceList(React);
@@ -12,11 +13,11 @@ export default (React) => {
         }
     }
 
-    function MaybeList(props) {
+    function MaybeList({loading, resourceType, resources}) {
         return (
             <div>
-                <Helmet title={props.resourceType}/>
-                <ConditionalList {...props} />
+                <Helmet title={resourceType}/>
+                {loading ? <PageLoading /> : <ConditionalList resources={resources} resourceType={resourceType} />}
             </div>
         );
     }
@@ -24,7 +25,8 @@ export default (React) => {
     MaybeList.displayName = 'MaybeResourceList';
     MaybeList.propTypes = {
         resources: React.PropTypes.array.isRequired,
-        resourceType: React.PropTypes.string.isRequired
+        resourceType: React.PropTypes.string.isRequired,
+        loading: React.PropTypes.bool.isRequired
     };
 
     return MaybeList;
