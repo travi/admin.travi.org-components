@@ -27,6 +27,7 @@ storiesOf('Resource Details', module)
             {story()}
         </MuiThemeProvider>
     ))
-    .add('resource', () => <Resource resource={{displayName: 'resource'}} loading={false} />)
-    .add('loading', () => <Resource resource={{displayName: 'resource'}} loading={true} />)
-    .add('person', () => <Person person={person}/>);
+    .add('generic resource', () => <Resource resource={{displayName: 'resource'}} loading={false} />)
+    .add('generic resource loading', () => <Resource resource={{}} loading={true} />)
+    .add('person', () => <Person person={person} loading={false} />)
+    .add('person loading', () => <Person person={{}} loading={true} />);

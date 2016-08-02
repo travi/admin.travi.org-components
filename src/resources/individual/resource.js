@@ -5,9 +5,8 @@ export default (React) => {
     function Resource({resource, loading}) {
         return (
             <div>
-                <Helmet title={resource.displayName}/>
-                {loading || <h3>{resource.displayName}</h3>}
-                {loading && <PageLoading />}
+                <Helmet title={resource.displayName || 'Loading Resource...'}/>
+                {loading ? <PageLoading /> : <h3>{resource.displayName}</h3>}
             </div>
         );
     }

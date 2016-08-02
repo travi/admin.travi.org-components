@@ -1,14 +1,17 @@
 import React from 'react';
 import reactDom from 'react-dom/server';
+import Helmet from 'react-helmet';
+import PageLoading from '../../../../../src/atoms/loading-indicators/page';
 
 import cheerio from 'cheerio';
+import {shallow} from 'enzyme';
 import microformats from 'microformat-node';
 import {string, word, integer, url} from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
 import {createPerson} from '../../../../../src/main';
-const User = createPerson(React);
+const Person = createPerson(React);
 
 suite('person component test', () => {
     const person = {
@@ -25,14 +28,14 @@ suite('person component test', () => {
     };
 
     test('that displayName is set', () => {
-        assert.equal(User.displayName, 'Person');
+        assert.equal(Person.displayName, 'Person');
     });
 
     test('that the resource is displayed', () => {
         const data = {person},
 
             $ = cheerio.load(reactDom.renderToStaticMarkup(
-                <User {...data} />
+                <Person {...data} loading={false} />
             )),
 
             $avatar = $('div.resource img');
@@ -54,8 +57,27 @@ suite('person component test', () => {
     });
 
     test('that the page title is set', () => {
-        const tree = skinDeep.shallowRender(<User person={person} />);
+        const tree = skinDeep.shallowRender(<Person person={person} />);
 
         assert.isObject(tree.subTree('HelmetWrapper', {title: person.displayName}));
+    });
+
+    test('that the loading indicator is shown when data is still loading', () => {
+        const wrapper = shallow(<Person person={{}} loading={true} />);
+
+        assert.isTrue(
+            wrapper.contains(<PageLoading />),
+            'expected loading indicator to be displayed'
+        );
+
+        assert.isTrue(
+            wrapper.contains(<Helmet title="Loading person..." />),
+            'expected the title to be set to "Loading person..." using helmet'
+        );
+        assert.isFalse(
+            wrapper.containsMatchingElement(<div className="resource" />),
+            'expected the content to be hidden'
+        );
+
     });
 });

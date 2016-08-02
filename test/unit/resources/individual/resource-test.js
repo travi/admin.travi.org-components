@@ -31,15 +31,15 @@ suite('resource component test', () => {
     });
 
     test('that a loading indicator is displayed when data is still loading', () => {
-        const wrapper = shallow(<Resource resource={resource} loading={true} />);
+        const wrapper = shallow(<Resource resource={{}} loading={true} />);
 
         assert.isTrue(
             wrapper.contains(<PageLoading />),
             'expected loading indicator to be displayed'
         );
         assert.isTrue(
-            wrapper.contains(<Helmet title={resource.displayName} />),
-            `expected the title to be set to '${resource.displayName}' using helmet`
+            wrapper.contains(<Helmet title="Loading Resource..." />),
+            'expected the title to be set to "Loading Resource..." using helmet'
         );
         assert.isFalse(wrapper.containsMatchingElement(<h3 />), 'heading should be hidden');
     });
