@@ -5,8 +5,7 @@ import {assert} from 'chai';
 import {string, url} from '@travi/any';
 
 import styles from '../../../helpers/style-fakes';
-import {createResourceList} from '../../../../src/main';
-const ResourceList = createResourceList(React);
+import {ResourceList} from '../../../../src/main';
 
 function assertSimpleResourceRenders(listItem, resource) {
     assert.deepEqual(listItem.props.children, ['', resource.displayName]);
@@ -53,10 +52,6 @@ suite('resource list component', () => {
             }
         }
     ];
-
-    test('that displayName is set', () => {
-        assert.equal(ResourceList.displayName, 'ResourceList');
-    });
 
     test('that list renders', () => {
         const

@@ -4,15 +4,10 @@ import skinDeep from 'skin-deep';
 import {assert} from 'chai';
 import {string, simpleObject, listOf} from '@travi/any';
 
-import {createMaybeList} from '../../../../src/main';
-const MaybeList = createMaybeList(React);
+import {MaybeList} from '../../../../src/main';
 
 suite('maybe-list component', () => {
     const resourceType = string();
-
-    test('that displayName is set', () => {
-        assert.equal(MaybeList.displayName, 'MaybeResourceList');
-    });
 
     test('that message is displayed if the resource list is empty', () => {
         const
