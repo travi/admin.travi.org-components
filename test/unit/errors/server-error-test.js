@@ -4,15 +4,9 @@ import reactDom from 'react-dom/server';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import {createServerError} from '../../../src/main';
+import {ServerError} from '../../../src/main';
 
 suite('server error', () => {
-    const ServerError = createServerError(React);
-
-    test('that displayName is set', () => {
-        assert.equal(ServerError.displayName, 'ServerError');
-    });
-
     test('that the proper content is displayed', () => {
         const $ = cheerio.load(reactDom.renderToStaticMarkup(<ServerError />));
 

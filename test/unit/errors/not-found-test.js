@@ -3,16 +3,9 @@ import cheerio from 'cheerio';
 import reactDom from 'react-dom/server';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
-
-import {createNotFound} from '../../../src/main';
+import {NotFound} from '../../../src/main';
 
 suite('not found', () => {
-    const NotFound = createNotFound(React);
-
-    test('that displayName is set', () => {
-        assert.equal(NotFound.displayName, 'NotFound');
-    });
-
     test('that the proper content is displayed', () => {
         const $ = cheerio.load(reactDom.renderToStaticMarkup(<NotFound />));
 
