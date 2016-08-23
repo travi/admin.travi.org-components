@@ -10,8 +10,7 @@ import {string, word, integer, url} from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import {createPerson} from '../../../../../src/main';
-const Person = createPerson(React);
+import {Person} from '../../../../../src/main';
 
 suite('person component test', () => {
     const person = {
@@ -26,10 +25,6 @@ suite('person component test', () => {
             size: integer()
         }
     };
-
-    test('that displayName is set', () => {
-        assert.equal(Person.displayName, 'Person');
-    });
 
     test('that the resource is displayed', () => {
         const data = {person},

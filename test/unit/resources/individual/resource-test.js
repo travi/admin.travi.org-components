@@ -6,15 +6,10 @@ import {string} from '@travi/any';
 import {assert} from 'chai';
 import {shallow} from 'enzyme';
 
-import {createResource} from '../../../../src/main';
-const Resource = createResource(React);
+import {Resource} from '../../../../src/main';
 
 suite('resource component test', () => {
     const resource = {id: string(), displayName: string()};
-
-    test('that displayName is set', () => {
-        assert.equal(Resource.displayName, 'Resource');
-    });
 
     test('that the resource is displayed', () => {
         const wrapper = shallow(<Resource resource={resource} loading={false} />);
