@@ -4,15 +4,9 @@ import reactDom from 'react-dom/server';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import { createIndex } from '../../src/main';
+import { Index } from '../../src/main';
 
 suite('index', () => {
-    const Index = createIndex(React);
-
-    test('that displayName is set', () => {
-        assert.equal(Index.displayName, 'Index');
-    });
-
     test('that the proper content is displayed', () => {
         const $ = cheerio.load(reactDom.renderToStaticMarkup(<Index />));
 

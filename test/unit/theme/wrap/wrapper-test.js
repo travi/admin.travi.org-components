@@ -4,15 +4,9 @@ import {listOf, simpleObject} from '@travi/any';
 import {assert} from 'chai';
 import skinDeep from 'skin-deep';
 
-import {createWrap} from '../../../../src/main';
+import {Wrap} from '../../../../src/main';
 
 suite('wrapper component', () => {
-    const Wrap = createWrap(React);
-
-    test('that displayName is set', () => {
-        assert.equal(Wrap.displayName, 'Wrap');
-    });
-
     test('that the layout markup is correct', () => {
         const
             primaryNav = listOf(simpleObject),

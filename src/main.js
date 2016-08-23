@@ -1,13 +1,6 @@
-import createIndex from './index';
-import createPrimaryNav from './theme/nav/primary-nav';
-import createWrap from './theme/wrap/wrap';
-
-export {
-    createIndex,
-    createPrimaryNav,
-    createWrap
-};
-
+export {default as Wrap} from './theme/wrap/wrap';
+export {default as PrimaryNav} from './theme/nav/primary-nav';
+export {default as Index} from './index';
 export {default as Resource} from './resources/individual/resource';
 export {default as Person} from './resources/individual/persons/person';
 export {default as ResourceList} from './resources/list/list';

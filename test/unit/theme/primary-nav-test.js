@@ -6,15 +6,9 @@ import cheerio from 'cheerio';
 import {assert} from 'chai';
 
 import HistoryWrapper from '../../helpers/history-wrapper';
-import {createPrimaryNav} from '../../../src/main';
-
-const PrimaryNav = createPrimaryNav(React);
+import {PrimaryNav} from '../../../src/main';
 
 suite('primary navigation', () => {
-    test('that displayName is set', () => {
-        assert.equal(PrimaryNav.displayName, 'PrimaryNav');
-    });
-
     test('that the resource types are listed as links', () => {
         const
             primaryNav = listOf(() => {
