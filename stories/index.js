@@ -1,7 +1,5 @@
 import React from 'react';
 import {storiesOf} from '@kadira/storybook';
-import createIndex from '../src/index';
-
-const Index = createIndex(React);
+import Index from '../src/index';
 
 storiesOf('Index', module).add('default', () => <Index />);

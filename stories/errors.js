@@ -1,11 +1,7 @@
 import React from 'react';
 import {storiesOf} from '@kadira/storybook';
-import createNotFound from '../src/errors/not-found';
-import createServerError from '../src/errors/server-error';
-
-const
-    NotFound = createNotFound(React),
-    ServerError = createServerError(React);
+import NotFound from '../src/errors/not-found';
+import ServerError from '../src/errors/server-error';
 
 storiesOf('Errors', module)
     .add('not found', () => <NotFound />)

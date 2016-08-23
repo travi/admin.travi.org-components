@@ -1,8 +1,6 @@
 import React from 'react';
 import {storiesOf} from '@kadira/storybook';
-import createPrimaryNav from '../src/theme/nav/primary-nav';
-
-const PrimaryNav = createPrimaryNav(React);
+import PrimaryNav from '../src/theme/nav/primary-nav';
 
 storiesOf('Primary Nav', module)
     .add('empty nav', () => <PrimaryNav primaryNav={[]}/>)

@@ -1,9 +1,7 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {storiesOf} from '@kadira/storybook';
-import createResourceList from '../src/resources/list/maybe-list';
-
-const ResourceList = createResourceList(React);
+import ResourceList from '../src/resources/list/maybe-list';
 
 storiesOf('Resource List', module)
     .addDecorator((story) => (
