@@ -1,6 +1,9 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {storiesOf} from '@kadira/storybook';
+import { specs, describe, it } from 'storybook-addon-specifications';
+import {mount} from 'enzyme';
+import {assert} from 'chai';
 import ResourceList from '../src/resources/list/maybe-list';
 
 storiesOf('Resource List', module)
@@ -12,7 +15,23 @@ storiesOf('Resource List', module)
     .addWithInfo(
         'empty list',
         'this is the empty state',
-        () => <ResourceList resourceType="foo" resources={[]} loading={false} />
+        () => {
+            const list = <ResourceList resourceType="foo" resources={[]} loading={false} />;
+
+            specs(() => {
+                return describe('resource list empty state', () => {
+                    it('should show a message explaining that no resources are available', () => {
+                        const
+                            wrapper = mount(list),
+                            alert = wrapper.find('p');
+
+                        assert.equal(alert.text(), 'No foo are available');
+                    });
+                });
+            });
+
+            return list;
+        }
     )
     .addWithInfo(
         'loading',
