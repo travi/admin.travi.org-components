@@ -1,7 +1,6 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {storiesOf} from '@kadira/storybook';
-import { specs, describe, it } from 'storybook-addon-specifications';
+import {storiesOf, specs, describe, it} from '../.storybook/facade';
 import {mount} from 'enzyme';
 import {assert} from 'chai';
 import ResourceList from '../src/resources/list/maybe-list';
