@@ -3,13 +3,14 @@
   "version": "0.11.0",
   "description": "React components for https://admin.travi.org",
   "scripts": {
-    "test": "grunt",
+    "test": "grunt && npm run test-stories",
     "start": "start-storybook -p 9002",
     "build-storybook": "build-storybook -o dist/storybook",
     "gh-pages": "grunt gh-pages",
     "preversion": "npm test",
     "prepublish": "grunt build",
-    "postpublish": "greenkeeper-postpublish"
+    "postpublish": "greenkeeper-postpublish",
+    "test-stories": "mocha stories/ -r .storybook/mocha-config.js --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
