@@ -1,6 +1,7 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {storiesOf, specs, describe, it} from '../.storybook/facade';
+import {storiesOf, specs} from '../.storybook/facade-storybook';
+import {describe, it} from '../.storybook/facade-mocha';
 import {mount} from 'enzyme';
 import {assert} from 'chai';
 import ResourceList from '../src/resources/list/maybe-list';
@@ -18,7 +19,7 @@ storiesOf('Resource List', module)
             const list = <ResourceList resourceType="foo" resources={[]} loading={false} />;
 
             specs(() => {
-                return describe('resource list empty state', () => {
+                return describe('empty list', () => {
                     it('should show a message explaining that no resources are available', () => {
                         const
                             wrapper = mount(list),

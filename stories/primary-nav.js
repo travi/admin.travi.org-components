@@ -1,5 +1,5 @@
 import React from 'react';
-import {storiesOf} from '@kadira/storybook';
+import {storiesOf} from '../.storybook/facade-storybook';
 import PrimaryNav from '../src/theme/nav/primary-nav';
 
 storiesOf('Primary Nav', module)

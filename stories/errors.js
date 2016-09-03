@@ -1,5 +1,5 @@
 import React from 'react';
-import {storiesOf} from '@kadira/storybook';
+import {storiesOf} from '../.storybook/facade-storybook';
 import NotFound from '../src/errors/not-found';
 import ServerError from '../src/errors/server-error';
 
