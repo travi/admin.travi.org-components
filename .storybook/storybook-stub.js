@@ -1,20 +1,20 @@
 export function storiesOf() {
-    var api = {};
-    api.add = (name, func)=> {
+    const api = {};
+    api.add = (name, func) => {
         func();
         return api;
     };
-    api.addWithInfo = (name, desc, func)=> {
+    api.addWithInfo = (name, desc, func) => {
         func();
         return api;
     };
-    api.addDecorator = (func)=> {
+    api.addDecorator = (func) => {
         func(() => undefined);
         return api;
     };
     return api;
 }
 
-export const action = () => {};
-export const linkTo = () => {};
-export const specs = (spec) => spec();
+export function specs(spec) {
+    spec();
+}
