@@ -14,3 +14,5 @@ export default function Wrap({primaryNav, children}) {
         </div>
     );
 }
+
+Wrap.displayName = 'Wrap';

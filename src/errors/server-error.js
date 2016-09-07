@@ -10,3 +10,5 @@ export default function ServerError() {
         </div>
     );
 }
+
+ServerError.displayName = 'ServerError';

@@ -11,6 +11,8 @@ function ConditionalList({resources, resourceType}) {
     }
 }
 
+ConditionalList.displayName = 'ConditionalList';
+
 export default function MaybeList({loading, resourceType, resources}) {
     return (
         <div>
@@ -19,6 +21,8 @@ export default function MaybeList({loading, resourceType, resources}) {
         </div>
     );
 }
+
+MaybeList.displayName = 'MaybeList';
 
 MaybeList.propTypes = {
     resources: React.PropTypes.array.isRequired,

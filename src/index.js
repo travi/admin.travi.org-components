@@ -10,3 +10,5 @@ export default function Index() {
         </div>
     );
 }
+
+Index.displayName = 'Index';

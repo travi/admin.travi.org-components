@@ -10,3 +10,5 @@ export default function Resource({resource, loading}) {
         </div>
     );
 }
+
+Resource.displayName = 'Resource';

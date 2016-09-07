@@ -23,3 +23,5 @@ export default function ResourceList({resources}) {
         )) }</ListGroup>
     );
 }
+
+ResourceList.displayName = 'ResourceList';
