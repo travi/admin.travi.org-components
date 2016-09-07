@@ -30,3 +30,5 @@ export default function PrimaryNav({primaryNav}) {
         </Navbar>
     );
 }
+
+PrimaryNav.displayName = 'PrimaryNav';

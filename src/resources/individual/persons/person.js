@@ -39,3 +39,5 @@ export default function Person({person, loading}) {
         </div>
     );
 }
+
+Person.displayName = 'Person';
