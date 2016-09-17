@@ -7,6 +7,11 @@
 
 [![npm](https://img.shields.io/npm/v/@travi/admin.travi.org-components.svg?maxAge=2592000)](https://www.npmjs.com/package/@travi/admin.travi.org-components)
 
+## Install
+```
+$ npm install @travi/admin.travi.org-components --save-dev
+```
+
 ## View the components
 
 The latest version of the components are hosted [on GitHub Pages](https://travi.github.io/admin.travi.org-components)
