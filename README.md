@@ -11,6 +11,16 @@
 
 The latest version of the components are hosted [on GitHub Pages](https://travi.github.io/admin.travi.org-components)
 
+## Key Technology
+- [x] [npm](https://npmjs.com)
+- [x] [React](https://facebook.github.io/react/)
+- [x] [React Storybook](https://github.com/kadirahq/react-storybook)
+    * Addons
+        - [x] [specifications](https://github.com/mthuret/storybook-addon-specifications)
+        - [x] [info](https://github.com/kadirahq/react-storybook-addon-info)
+- [x] [CSS Modules](https://github.com/css-modules/css-modules)
+- [x] [Sass](http://sass-lang.com/)
+
 ## Local Development
 
 ### Install dependencies
