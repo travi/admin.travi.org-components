@@ -4,6 +4,7 @@ stories/
 .storybook/
 test/
 node_modules/
+coverage/
 
 .babelrc
 .editorconfig
