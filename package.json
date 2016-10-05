@@ -31,7 +31,7 @@
   "browser": "lib/browser.js",
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "3.2.1",
-    "@kadira/storybook": "2.21.0",
+    "@kadira/storybook": "2.22.0",
     "@travi/any": "0.6.1",
     "@travi/eslint-config-travi": "0.3.0",
     "babel-cli": "6.16.0",
