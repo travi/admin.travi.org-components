@@ -64,7 +64,7 @@
     "grunt-sass-lint": "0.2.0",
     "istanbul": "1.0.0-alpha.2",
     "load-grunt-config": "0.19.2",
-    "mocha": "3.1.0",
+    "mocha": "3.1.1",
     "node-sass": "3.10.1",
     "react": "15.3.1",
     "react-addons-test-utils": "15.3.2",
