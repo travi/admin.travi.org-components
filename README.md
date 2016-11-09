@@ -33,7 +33,6 @@ The latest version of the components are hosted [on GitHub Pages](https://travi.
 ```
 $ nvm install
 $ npm install
-$ bundle install
 ```
 
 ### View the components
