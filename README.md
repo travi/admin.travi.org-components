@@ -6,6 +6,9 @@
 [![bitHound](https://img.shields.io/bithound/dependencies/github/travi/admin.travi.org-components.svg?maxAge=2592000)](https://www.bithound.io/github/travi/admin.travi.org-components)
 
 [![npm](https://img.shields.io/npm/v/@travi/admin.travi.org-components.svg?maxAge=2592000)](https://www.npmjs.com/package/@travi/admin.travi.org-components)
+[![license](https://img.shields.io/github/license/travi/admin.travi.org-components.svg)](LICENSE)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 
 ## Install
 ```
