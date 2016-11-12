@@ -10,7 +10,9 @@
     "preversion": "npm test",
     "prepublish": "grunt build",
     "postpublish": "greenkeeper-postpublish",
-    "test-stories": "mocha stories/ -r .storybook/mocha-config.js --compilers js:babel-register"
+    "test-stories": "mocha stories/ -r .storybook/mocha-config.js --compilers js:babel-register",
+    "precommit": "npm test",
+    "commitmsg": "validate-commit-msg"
   },
   "repository": {
     "type": "git",
@@ -46,6 +48,7 @@
     "cheerio": "0.22.0",
     "coveralls": "2.11.15",
     "css-loader": "0.25.0",
+    "cz-conventional-changelog": "1.2.0",
     "enzyme": "2.6.0",
     "file-loader": "0.9.0",
     "greenkeeper-postpublish": "1.0.1",
@@ -62,6 +65,7 @@
     "grunt-notify": "0.4.5",
     "grunt-rollup": "1.0.1",
     "grunt-sass-lint": "0.2.2",
+    "husky": "0.11.9",
     "istanbul": "1.0.0-alpha.2",
     "jsdom": "9.8.3",
     "load-grunt-config": "0.19.2",
@@ -77,6 +81,7 @@
     "style-loader": "0.13.1",
     "time-grunt": "1.4.0",
     "url-loader": "0.5.7",
+    "validate-commit-msg": "2.8.2",
     "webpack-hot-middleware": "2.13.2"
   },
   "dependencies": {
@@ -92,5 +97,10 @@
   "peerDependencies": {
     "react": "^15.2.0",
     "react-helmet": "^3.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
