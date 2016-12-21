@@ -75,7 +75,7 @@
     "react-addons-test-utils": "15.4.1",
     "react-helmet": "3.2.3",
     "rollup-plugin-babel": "2.7.1",
-    "sass-loader": "4.1.0",
+    "sass-loader": "4.1.1",
     "skin-deep": "0.16.0",
     "storybook-addon-specifications": "1.0.15",
     "style-loader": "0.13.1",
