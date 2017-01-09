@@ -70,7 +70,7 @@
     "jsdom": "9.9.1",
     "load-grunt-config": "0.19.2",
     "mocha": "3.2.0",
-    "node-sass": "4.1.1",
+    "node-sass": "4.2.0",
     "react": "15.4.1",
     "react-addons-test-utils": "15.4.2",
     "react-helmet": "3.2.3",
