@@ -12,7 +12,6 @@ deploy:
   - provider: npm
     email: npm@travi.org
     on:
-      node: 6.6
       tags: true
       repo: travi/admin.travi.org-components
     api_key:
