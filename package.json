@@ -6,7 +6,6 @@
     "test": "grunt && npm run test-stories",
     "start": "start-storybook -p 9002",
     "build-storybook": "build-storybook -o dist/storybook",
-    "predeploy": "npm run build-storybook",
     "deploy": "gh-pages --silent -r \"https://$GH_TOKEN@github.com/travi/admin.travi.org-components.git\" -d dist/storybook/",
     "preversion": "npm test",
     "prepublish": "grunt build",
