@@ -8,11 +8,6 @@ module.exports = function (grunt) {
             staticMappings: {
                 sasslint: 'grunt-sass-lint'
             }
-        },
-        config: {
-            gitName: process.env.GIT_NAME,
-            gitEmail: process.env.GIT_EMAIL,
-            ghToken: process.env.GH_TOKEN
         }
     });
 

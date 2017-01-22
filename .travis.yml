@@ -1,13 +1,8 @@
 language: node_js
-node_js:
-  - '5.10'
-  - 6.6
 deploy:
   - skip_cleanup: true
     provider: script
-    script: npm run build-storybook && npm run gh-pages
-    on:
-      node: '5.10'
+    script: npm run deploy
   - provider: npm
     email: npm@travi.org
     on:
