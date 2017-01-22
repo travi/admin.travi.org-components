@@ -3,6 +3,7 @@
   "version": "0.11.1",
   "description": "React components for https://admin.travi.org",
   "scripts": {
+    "lint:md": "globstar --node -- markdownlint **/*.md",
     "test": "grunt && run-s test:*",
     "test:integration": "mocha stories/ -r .storybook/mocha-config.js --compilers js:babel-register",
     "start": "start-storybook -p 9002",
@@ -52,6 +53,7 @@
     "enzyme": "2.7.0",
     "file-loader": "0.9.0",
     "gh-pages": "0.12.0",
+    "globstar": "1.0.0",
     "greenkeeper-postpublish": "1.0.1",
     "grunt": "1.0.1",
     "grunt-babel": "6.0.0",
@@ -69,6 +71,7 @@
     "istanbul": "1.0.0-alpha.2",
     "jsdom": "9.9.1",
     "load-grunt-config": "0.19.2",
+    "markdownlint-cli": "0.2.0",
     "mocha": "3.2.0",
     "node-sass": "4.3.0",
     "npm-run-all": "4.0.1",

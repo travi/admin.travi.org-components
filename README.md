@@ -1,4 +1,4 @@
-# React components for https://admin.travi.org
+# React components for <https://admin.travi.org>
 
 [![Build Status](https://img.shields.io/travis/travi/admin.travi.org-components.svg?style=flat)](https://travis-ci.org/travi/admin.travi.org-components)
 [![Coverage Status](http://img.shields.io/coveralls/travi/admin.travi.org-components.svg?style=flat)](https://coveralls.io/r/travi/admin.travi.org-components?branch=master)
@@ -9,23 +9,24 @@
 [![license](https://img.shields.io/github/license/travi/admin.travi.org-components.svg)](LICENSE)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-
 ## Install
-```
+
+```bash
 $ npm install @travi/admin.travi.org-components --save-dev
 ```
 
-## View the components
+## View a demo of the components
 
 The latest version of the components are hosted [on GitHub Pages](https://travi.github.io/admin.travi.org-components)
 
 ## Key Technology
+
 - [x] [npm](https://npmjs.com)
 - [x] [React](https://facebook.github.io/react/)
 - [x] [React Storybook](https://github.com/kadirahq/react-storybook)
-    * Addons
-        - [x] [specifications](https://github.com/mthuret/storybook-addon-specifications)
-        - [x] [info](https://github.com/kadirahq/react-storybook-addon-info)
+  - Addons
+    - [x] [specifications](https://github.com/mthuret/storybook-addon-specifications)
+    - [x] [info](https://github.com/kadirahq/react-storybook-addon-info)
 - [x] [CSS Modules](https://github.com/css-modules/css-modules)
 - [x] [Sass](http://sass-lang.com/)
 
@@ -33,17 +34,19 @@ The latest version of the components are hosted [on GitHub Pages](https://travi.
 
 ### Install dependencies
 
-```
+```bash
 $ nvm install
 $ npm install
 ```
 
 ### View the components
-```
+
+```bash
 $ npm start
 ```
 
 ### Run verification
-```
+
+```bash
 $ npm test
 ```
