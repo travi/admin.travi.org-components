@@ -5,13 +5,15 @@ stories/
 test/
 node_modules/
 coverage/
+.nyc_output/
 
 .babelrc
 .editorconfig
 .eslintrc.yml
+.eslintignore
 .gitattributes
 .nvmrc
-.scss-lint
+.markdownlintrc
+.sass-lint.yml
 .travis.yml
-Gemfile*
 Gruntfile.js
