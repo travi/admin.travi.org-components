@@ -4,14 +4,10 @@ build:
   - copy:scss
   - notify:rebuild
 
-lint: sasslint
-
 unit: mocha_istanbul:unit
 
 test: unit
 
-verify:
-  - lint
-  - test
+verify: test
 
 default: verify
