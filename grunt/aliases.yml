@@ -4,9 +4,7 @@ build:
   - copy:scss
   - notify:rebuild
 
-lint:
-  - eslint
-  - sasslint
+lint: sasslint
 
 unit: mocha_istanbul:unit
 

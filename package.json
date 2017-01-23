@@ -5,7 +5,7 @@
   "scripts": {
     "lint:md": "globstar --node -- markdownlint **/*.md",
     "lint:js": "eslint .",
-    "test": "grunt && run-s test:*",
+    "test": "grunt && run-s lint:* test:*",
     "test:integration": "mocha stories/ -r .storybook/mocha-config.js --compilers js:babel-register",
     "start": "start-storybook -p 9002",
     "build-storybook": "build-storybook -o dist/storybook",
