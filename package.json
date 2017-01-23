@@ -4,6 +4,7 @@
   "description": "React components for https://admin.travi.org",
   "scripts": {
     "lint:md": "globstar --node -- markdownlint **/*.md",
+    "lint:js": "eslint .",
     "test": "grunt && run-s test:*",
     "test:integration": "mocha stories/ -r .storybook/mocha-config.js --compilers js:babel-register",
     "start": "start-storybook -p 9002",
