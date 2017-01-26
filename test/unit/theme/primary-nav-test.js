@@ -9,30 +9,26 @@ import HistoryWrapper from '../../helpers/history-wrapper';
 import {PrimaryNav} from '../../../src/main';
 
 suite('primary navigation', () => {
-    test('that the resource types are listed as links', () => {
-        const
-            primaryNav = listOf(() => {
-                return {
-                    text: string(),
-                    path: url()
-                };
-            }),
+  test('that the resource types are listed as links', () => {
+    const primaryNav = listOf(() => ({
+      text: string(),
+      path: url()
+    }));
 
-            $ = cheerio.load(dom.renderToStaticMarkup(
-                <HistoryWrapper><PrimaryNav primaryNav={primaryNav} /></HistoryWrapper>
-            )),
-            $items = $('li');
+    const $ = cheerio.load(dom.renderToStaticMarkup(
+      <HistoryWrapper><PrimaryNav primaryNav={primaryNav} /></HistoryWrapper>
+    ));
+    const $items = $('li');
 
-        assert.equal($('nav').length, 1);
-        assert.equal($items.length, primaryNav.length);
-        $items.each((index, item) => {
-            const
-                $item = $(item),
-                type = primaryNav[index],
-                $link = $item.find('> a');
+    assert.equal($('nav').length, 1);
+    assert.equal($items.length, primaryNav.length);
+    $items.each((index, item) => {
+      const $item = $(item);
+      const type = primaryNav[index];
+      const $link = $item.find('> a');
 
-            assert.equal($link.text(), type.text);
-            assert.equal($link.attr('href'), type.path);
-        });
+      assert.equal($link.text(), type.text);
+      assert.equal($link.attr('href'), type.path);
     });
+  });
 });

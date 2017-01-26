@@ -6,16 +6,16 @@ import skinDeep from 'skin-deep';
 import {NotFound} from '../../../src/main';
 
 suite('not found', () => {
-    test('that the proper content is displayed', () => {
-        const $ = cheerio.load(reactDom.renderToStaticMarkup(<NotFound />));
+  test('that the proper content is displayed', () => {
+    const $ = cheerio.load(reactDom.renderToStaticMarkup(<NotFound />));
 
-        assert.equal($('h2').text(), '404');
-        assert.equal($('p').text(), 'Page Not Found');
-    });
+    assert.equal($('h2').text(), '404');
+    assert.equal($('p').text(), 'Page Not Found');
+  });
 
-    test('that the page title is set', () => {
-        const tree = skinDeep.shallowRender(<NotFound />);
+  test('that the page title is set', () => {
+    const tree = skinDeep.shallowRender(<NotFound />);
 
-        assert.isObject(tree.subTree('HelmetWrapper', {title: 'Page Not Found'}));
-    });
+    assert.isObject(tree.subTree('HelmetWrapper', {title: 'Page Not Found'}));
+  });
 });
