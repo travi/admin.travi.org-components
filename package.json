@@ -40,7 +40,7 @@
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "3.3.0",
     "@kadira/storybook": "2.35.3",
-    "@travi/any": "1.0.2",
+    "@travi/any": "1.0.3",
     "@travi/eslint-config-travi": "1.0.0-beta.4",
     "babel-cli": "6.22.2",
     "babel-core": "6.23.1",
