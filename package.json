@@ -12,6 +12,7 @@
     "coverage": "nyc run-s test:unit",
     "report-coverage": "nyc report --reporter=text-lcov | coveralls",
     "start": "start-storybook -p 9002",
+    "build": "rollup -c",
     "build-storybook": "build-storybook -o dist/storybook",
     "deploy": "gh-pages --silent -r \"https://$GH_TOKEN@github.com/travi/admin.travi.org-components.git\" -d dist/storybook/",
     "preversion": "npm test",
