@@ -36,8 +36,8 @@
     "url": "https://github.com/travi/admin.travi.org-components/issues"
   },
   "homepage": "https://github.com/travi/admin.travi.org-components#readme",
-  "main": "lib/main.js",
-  "browser": "lib/browser.js",
+  "main": "lib/components.cjs.js",
+  "module": "lib/components.es.js",
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "3.3.0",
     "@kadira/storybook": "2.35.3",
