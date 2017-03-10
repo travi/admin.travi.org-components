@@ -1,10 +1,12 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 import babel from 'rollup-plugin-babel';
-import path from 'path';
+import glob from 'glob';
 
 export default {
   entry: 'src/main.js',
+  sourceMap: true,
   external: [
+    ...glob.sync('**/*.scss', {cwd: 'src'}).map(file => require.resolve(`${__dirname}/src/${file}`)),
     'react',
     'react-helmet',
     'react-router',
@@ -13,14 +15,6 @@ export default {
     'material-ui/CircularProgress'
   ],
   plugins: [
-    {
-      transform: (code, id) => {
-        if ('.scss' === path.extname(id)) {
-          return {code: 'const styles = {}; export default styles;', map: {mappings: ''}};
-        }
-        return null;
-      }
-    },
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
