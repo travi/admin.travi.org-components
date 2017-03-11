@@ -18,7 +18,8 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: ['react', 'es2015-rollup']
+      presets: ['react', 'es2015-rollup'],
+      plugins: [['transform-react-remove-prop-types', {mode: 'wrap'}]]
     })
   ],
   targets: [
