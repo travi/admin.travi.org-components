@@ -1,7 +1,12 @@
 language: node_js
 notifications:
   email: false
-after_success: npm run report-coverage
+branches:
+  except:
+    - "/^v\\d+\\.\\d+\\.\\d+$/"
+after_success:
+  - npm run report-coverage
+  - npm run semantic-release
 before_deploy:
   - npm run build-storybook
   - git config --global user.name "$GIT_NAME"
@@ -10,13 +15,6 @@ deploy:
   - skip_cleanup: true
     provider: script
     script: npm run deploy
-  - provider: npm
-    email: npm@travi.org
-    on:
-      tags: true
-      repo: travi/admin.travi.org-components
-    api_key:
-      secure: IGXm3VTSwG1uowt8X/eAgORQ8vkYd0RmkpxqLSWIziJC23yW+st1Atab80gKkqS/bLsIhtgC+x082IE4RtVtLWrd/JNSPZLE8Kn45KcYKPWgueQGwB4P4f8J+WeYma/G81GGAZLBD24+z4KuAcxPtkFQ877ZZBIoONdVqb6Eo1mlcMohOZTuYGXazMxICFWLeZVk+fHeMQGKR0/Y/h6oz57b7Z1mprY3iO72/+H3CSFeBJzFVl6sCnzqfidXfWhgXAPsORaUjomQIzcCLvkr1Xfy9uKdfK+B8IMEDNHh4d6RlbCq/r9PGHvx30puOFDaJrLK7AFBbp3aQQZoGv69ZavdOemXp+/4H5yGSqQIyGMXBr7QscNaYk/4e/8EltqDUVRGEErqbBSuLTIhK7ZLQvRFC+Byy+nN4ihUulJU7IOQVo2ThoSUqe0Le4d3JCuyxAbIkH8/SwZbMcF2DRz4FefQpPZ8+hrgNOsgq7u2xAl1zv1d4vyWnyatMJcY2f1LqjiEhi/o3UI73h7sC5FO0A571yDcv4tSJIexCYWJK9f9WS34NheljX2mXt9a5viCPOqA7/8L/c1tTohuFd0F7OKGyHHTJJYssHIMWGf1xtnUUWiozHhu1PZbapOrZkaD77bSJreFM363QmaYSoQKwTm+Y+uUXjHWctWa+a/vDQw=
 env:
   global:
   - secure: FNvLzmIyC69nE8URXRtzfZyWMu798b4wXhkNn2q4PDyWwYgXjA3jD6uOjlUDF2Cf2tRhbxwFaed0IstlzPX3UhoJO0p9Z1GNh1COAQGrMoMXOPPnvuhvCzOeYsPIC6r/8Lt6w/m7YwQ3qYcEfy9/bzf8LKrLNTGpB5/HnmQCfsvRbQC97UL7JoX8BbPuFqyqtGNLDMFgVz2d9Z/OscJ6uUy/caK8Rj2NAh7GfNU1NV2LmZ4Z6Sy9RCqb+aCwaFQi/BkqLPrFOsXLTY18xYio3c33FjpgZvc+XGaaLMWj2Sd8jFEspcLkXBAKjrufzPNc+9V9ogGEuxEccgI2tQiM1TUs0+ng21zqlMk+e9Zo1d9aE+wKXMkIbevf35G/428vnjZJW9gJPtBoSuZdJziTZTTdJASn4wiZtxEuAYYHKKPhXlBob1GhvrQp3EJItpp5kI/l0EQEan5tWoh0y19z19RCCatYLMoZ6hPRNG5arWmOhmeNAJZ6AtsNJypcPP6KWvXfI7rfQGv7gUBWUgkLR0eC3FjCxxUgkHz1dumc5xZlVcgyjpbgDceNIoseznqdtnuGwUYIK4b5X8htoK9uG/EVbUhhCdAraAJFcZnuMWzqCoInP62z6l3GBTByX5bci4+Sje08v7XKru6nftFTBwXMJt4ioCl/jfNYIW0G9jM=
