@@ -1,5 +1,0 @@
-build:
-  files:
-    - src/**/*.js
-  tasks:
-    - build

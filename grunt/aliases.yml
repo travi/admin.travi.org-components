@@ -1,5 +1,0 @@
-build:
-  - clean
-  - rollup
-  - copy:scss
-  - notify:rebuild

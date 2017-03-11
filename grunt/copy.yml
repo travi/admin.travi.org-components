@@ -1,6 +1,0 @@
-scss:
-  files:
-    - expand: true
-      cwd: src
-      src: '**/*.scss'
-      dest: lib

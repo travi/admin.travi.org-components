@@ -1,4 +1,0 @@
-rebuild:
-  options:
-    title: Rebuild complete
-    message: bundle rebuilt
