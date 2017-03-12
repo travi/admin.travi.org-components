@@ -19,7 +19,7 @@ $ npm install @travi/admin.travi.org-components --save-dev
 
 ## View a demo of the components
 
-The latest version of the components are hosted [on GitHub Pages](https://travi.github.io/admin.travi.org-components)
+The latest version of the components is hosted [on GitHub Pages](https://travi.github.io/admin.travi.org-components)
 
 ## Key Technology
 
