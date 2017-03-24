@@ -107,7 +107,7 @@
   },
   "peerDependencies": {
     "react": "^15.2.0",
-    "react-helmet": "^5.0.0"
+    "react-helmet": "^5.0.1"
   },
   "config": {
     "commitizen": {
