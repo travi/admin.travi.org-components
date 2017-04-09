@@ -98,7 +98,7 @@
   "dependencies": {
     "@travi/travi.org-theme": "0.2.0",
     "bootstrap-sass": "3.3.7",
-    "material-ui": "0.17.0",
+    "material-ui": "0.17.2",
     "microformat-node": "2.0.1",
     "react-bootstrap": "0.30.8",
     "react-dom": "15.4.2",
