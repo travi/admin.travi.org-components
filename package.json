@@ -81,7 +81,7 @@
     "nyc": "10.2.0",
     "react": "15.4.2",
     "react-addons-test-utils": "15.4.2",
-    "react-helmet": "5.0.0-beta",
+    "react-helmet": "5.0.2",
     "rimraf": "2.6.1",
     "rollup": "0.41.6",
     "rollup-plugin-babel": "2.7.1",
