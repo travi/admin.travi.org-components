@@ -1,4 +1,5 @@
 import React from 'react';
+import {arrayOf, string, shape} from 'prop-types';
 import {IndexLink} from 'react-router';
 import {Navbar, NavItem, Nav} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
@@ -34,8 +35,8 @@ export default function PrimaryNav({primaryNav}) {
 PrimaryNav.displayName = 'PrimaryNav';
 
 PrimaryNav.propTypes = {
-  primaryNav: React.PropTypes.arrayOf(React.PropTypes.shape({
-    path: React.PropTypes.string.isRequired,
-    text: React.PropTypes.string.isRequired
+  primaryNav: arrayOf(shape({
+    path: string.isRequired,
+    text: string.isRequired
   })).isRequired
 };
