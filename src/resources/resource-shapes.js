@@ -1,18 +1,18 @@
-import React from 'react';
+import {number, string, shape, arrayOf} from 'prop-types';
 
-export const resourcesShape = React.PropTypes.arrayOf(React.PropTypes.shape({
-  id: React.PropTypes.number.isRequired,
-  displayName: React.PropTypes.string.isRequired,
-  thumbnail: React.PropTypes.shape({
-    src: React.PropTypes.string.isRequired
+export const resourcesShape = arrayOf(shape({
+  id: number.isRequired,
+  displayName: string.isRequired,
+  thumbnail: shape({
+    src: string.isRequired
   }),
-  links: React.PropTypes.shape({
-    self: React.PropTypes.shape({
-      href: React.PropTypes.string
+  links: shape({
+    self: shape({
+      href: string
     })
   })
 }));
 
-export const resourceShape = React.PropTypes.shape({
-  displayName: React.PropTypes.string
+export const resourceShape = shape({
+  displayName: string
 });

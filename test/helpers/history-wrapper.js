@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React from 'react';
 import {createMemoryHistory} from 'react-router';
+import {shape} from 'prop-types';
 
 export default class HistoryWrapper extends React.Component {
   getChildContext() {
@@ -20,5 +21,5 @@ export default class HistoryWrapper extends React.Component {
 }
 
 HistoryWrapper.childContextTypes = {
-  router: React.PropTypes.object
+  router: shape
 };

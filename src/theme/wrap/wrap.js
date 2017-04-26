@@ -1,4 +1,5 @@
 import React from 'react';
+import {arrayOf, shape, string, node} from 'prop-types';
 import Helmet from 'react-helmet';
 
 import PrimaryNav from '../nav/primary-nav';
@@ -18,9 +19,9 @@ export default function Wrap({primaryNav, children}) {
 Wrap.displayName = 'Wrap';
 
 Wrap.propTypes = {
-  primaryNav: React.PropTypes.arrayOf(React.PropTypes.shape({
-    path: React.PropTypes.string,
-    text: React.PropTypes.string
+  primaryNav: arrayOf(shape({
+    path: string,
+    text: string
   })),
-  children: React.PropTypes.node
+  children: node
 };
