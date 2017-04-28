@@ -1,4 +1,5 @@
 import React from 'react';
+import {string, bool} from 'prop-types';
 import Helmet from 'react-helmet';
 import ResourceList from './list';
 import {resourcesShape} from '../resource-shapes';
@@ -16,7 +17,7 @@ ConditionalList.displayName = 'ConditionalList';
 
 ConditionalList.propTypes = {
   resources: resourcesShape.isRequired,
-  resourceType: React.PropTypes.string.isRequired
+  resourceType: string.isRequired
 };
 
 export default function MaybeList({loading, resourceType, resources}) {
@@ -32,6 +33,6 @@ MaybeList.displayName = 'MaybeList';
 
 MaybeList.propTypes = {
   resources: resourcesShape.isRequired,
-  resourceType: React.PropTypes.string.isRequired,
-  loading: React.PropTypes.bool.isRequired
+  resourceType: string.isRequired,
+  loading: bool.isRequired
 };

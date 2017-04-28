@@ -1,4 +1,5 @@
 import React from 'react';
+import {bool} from 'prop-types';
 import Helmet from 'react-helmet';
 import PageLoading from '../../atoms/loading-indicators/page';
 import {resourceShape} from '../resource-shapes';
@@ -15,6 +16,6 @@ export default function Resource({resource, loading}) {
 Resource.displayName = 'Resource';
 
 Resource.propTypes = {
-  loading: React.PropTypes.bool.isRequired,
+  loading: bool.isRequired,
   resource: resourceShape
 };

@@ -21,5 +21,5 @@ export default class HistoryWrapper extends React.Component {
 }
 
 HistoryWrapper.childContextTypes = {
-  router: shape
+  router: shape()
 };
