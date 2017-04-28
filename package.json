@@ -9,7 +9,7 @@
     "lint:js": "eslint .",
     "lint:sass": "sass-lint src/**/*.scss",
     "test": "run-s lint:* test:*",
-    "test:unit": "mocha --recursive test/unit",
+    "test:unit": "mocha --recursive test/unit -r ./test/helpers/mocha-setup.js",
     "test:integration": "mocha stories/ -r .storybook/mocha-config.js --compilers js:babel-register",
     "coverage": "nyc run-s test:unit",
     "report-coverage": "nyc report --reporter=text-lcov | coveralls",

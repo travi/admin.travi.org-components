@@ -1,4 +1,5 @@
 import React from 'react';
+import {bool, shape, string} from 'prop-types';
 import Helmet from 'react-helmet';
 import PageLoading from '../../../../src/atoms/loading-indicators/page';
 
@@ -41,13 +42,13 @@ export default function Person({person, loading}) {
 Person.displayName = 'Person';
 
 Person.propTypes = {
-  loading: React.PropTypes.bool,
-  person: React.PropTypes.shape({
-    id: React.PropTypes.string,
-    displayName: React.PropTypes.string,
-    name: React.PropTypes.shape({
-      first: React.PropTypes.string,
-      last: React.PropTypes.string
+  loading: bool,
+  person: shape({
+    id: string,
+    displayName: string,
+    name: shape({
+      first: string,
+      last: string
     }).isRequired
   })
 };
