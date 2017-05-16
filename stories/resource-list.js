@@ -1,7 +1,9 @@
 import React from 'react';
+import storyRouter from 'storybook-router';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {mount} from 'enzyme';
 import {assert} from 'chai';
+import any from '@travi/any';
 import {storiesOf, specs} from '../.storybook/facade-storybook';
 import {describe, it} from '../.storybook/facade-mocha';
 import ResourceList from '../src/resources/list/maybe-list';
@@ -12,6 +14,7 @@ storiesOf('Resource List', module)
       {story()}
     </MuiThemeProvider>
   ))
+  .addDecorator(storyRouter())
   .addWithInfo(
     'empty list',
     'this is the empty state',
@@ -43,9 +46,9 @@ storiesOf('Resource List', module)
         resourceType="rides"
         loading={false}
         resources={[
-          {id: 1, displayName: 'corvette', links: {}},
-          {id: 2, displayName: 'truck', links: {}},
-          {id: 3, displayName: 'camaro', links: {}}
+          {id: 1, displayName: 'corvette', links: {self: {href: any.url()}}},
+          {id: 2, displayName: 'truck', links: {self: {href: any.url()}}},
+          {id: 3, displayName: 'camaro', links: {self: {href: any.url()}}}
         ]}
       />
     )
