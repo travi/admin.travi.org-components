@@ -93,7 +93,7 @@
     "skin-deep": "1.0.0",
     "storybook-addon-specifications": "1.0.16",
     "storybook-router": "0.2.3",
-    "style-loader": "0.18.0",
+    "style-loader": "0.18.1",
     "url-loader": "0.5.8",
     "validate-commit-msg": "2.12.1",
     "webpack-hot-middleware": "2.18.0"
