@@ -17,7 +17,7 @@
     "build:js": "rollup -c",
     "build": "run-s clean build:* copy:scss",
     "build-storybook": "build-storybook -o dist/storybook",
-    "deploy": "gh-pages --silent -r \"https://$GH_TOKEN@github.com/travi/admin.travi.org-components.git\" -d dist/storybook/",
+    "deploy": "NODE_DEBUG=gh-pages gh-pages --silent -r \"https://$GH_TOKEN@github.com/travi/admin.travi.org-components.git\" -d dist/storybook/",
     "preversion": "npm test",
     "prepublish": "run-s build",
     "postpublish": "greenkeeper-postpublish",
