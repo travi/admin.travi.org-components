@@ -7,11 +7,11 @@ storybookFacade.specs = specs;
 
 function setupDom() {
   const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
-  const { window } = jsdom;
+  const {window} = jsdom;
 
   function copyProps(src, target) {
     const props = Object.getOwnPropertyNames(src)
-      .filter(prop => typeof target[prop] === 'undefined')
+      .filter(prop => 'undefined' === typeof target[prop])
       .map(prop => Object.getOwnPropertyDescriptor(src, prop));
     Object.defineProperties(target, props);
   }
@@ -26,8 +26,4 @@ function setupDom() {
 
 setupDom();
 
-require.extensions['.scss'] = (module) => {
-  module.exports = {};
-
-  return module;
-};
+require.extensions['.scss'] = module => ({...module, exports: {}});

@@ -6,7 +6,7 @@
     "clean": "rimraf dist/ lib/",
     "copy:scss": "cpy '**/*.scss' '../lib/' --parents --cwd=src/",
     "lint:md": "globstar --node -- markdownlint **/*.md",
-    "lint:js": "eslint .",
+    "lint:js": "eslint . .storybook --cache",
     "lint:sass": "sass-lint src/**/*.scss",
     "test": "run-s lint:* test:*",
     "test:unit": "mocha --recursive test/unit -r ./test/helpers/mocha-setup.js",
