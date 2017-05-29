@@ -61,7 +61,7 @@
     "babel-preset-stage-2": "6.24.1",
     "babel-register": "6.24.1",
     "chai": "3.5.0",
-    "cheerio": "0.22.0",
+    "cheerio": "1.0.0-rc.1",
     "coveralls": "2.13.1",
     "cpy-cli": "1.0.1",
     "css-loader": "0.28.3",
