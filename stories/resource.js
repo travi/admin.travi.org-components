@@ -1,6 +1,6 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {storiesOf} from '@kadira/storybook';
+import {storiesOf} from '@storybook/react';
 import Resource from '../src/resources/individual/resource';
 import Person from '../src/resources/individual/persons/person';
 

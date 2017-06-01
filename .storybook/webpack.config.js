@@ -1,19 +1,27 @@
 module.exports = {
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   module: {
-    loaders: [
+    rules: [
       {
         test: /bootstrap-custom\.scss$/,
-        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+        loaders: [
+          'style-loader',
+          {loader: 'css-loader', options: {sourceMap: true}},
+          {loader: 'sass-loader', options: {sourceMap: true}}
+        ]
       },
       {
         test: /\.scss$/,
         exclude: /bootstrap-custom\.scss$/,
-        loaders: ['style', 'css?modules&sourceMap', 'sass?sourceMap']
+        loaders: [
+          'style-loader',
+          {loader: 'css-loader', options: {modules: true, sourceMap: true}},
+          {loader: 'sass-loader', options: {sourceMap: true}}
+        ]
       },
       {
         test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=d+\.d+\.d+)?$/,
-        loader: 'url'
+        loader: 'url-loader'
       }
     ]
   },
