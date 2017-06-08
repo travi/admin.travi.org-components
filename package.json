@@ -51,7 +51,7 @@
     "@travi/any": "1.0.7",
     "@travi/eslint-config-travi": "1.2.10",
     "babel-cli": "6.24.1",
-    "babel-core": "6.24.1",
+    "babel-core": "6.25.0",
     "babel-loader": "7.0.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.5",
     "babel-plugin-transform-require-ignore": "0.1.0",
