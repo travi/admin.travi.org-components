@@ -1,43 +1,38 @@
 import React from 'react';
-
-import skinDeep from 'skin-deep';
 import {assert} from 'chai';
+import {shallow} from 'enzyme';
 import {string, simpleObject, listOf, integer} from '@travi/any';
-
 import {MaybeList} from '../../../../src/main';
 
 suite('maybe-list component', () => {
   const resourceType = string();
 
   test('that message is displayed if the resource list is empty', () => {
-    const tree = skinDeep.shallowRender(React.createElement(MaybeList, {
-      resources: [],
-      resourceType,
-      loading: false
-    }));
-    const emptyState = tree.dive(['ConditionalList']);
+    const wrapper = shallow(<MaybeList resources={[]} resourceType={resourceType} loading={false} />);
+    const emptyState = wrapper.find('ConditionalList');
+    const message = emptyState.dive().find('p');
 
-    assert.isObject(tree.subTree('HelmetWrapper', {title: resourceType}));
-    assert.equal(emptyState.type, 'p');
-    assert.equal(emptyState.text(), `No ${resourceType} are available`);
-    assert.equal(emptyState.getRenderOutput().props.className, 'alert alert-info');
+    assert.equal(wrapper.find('HelmetWrapper').prop('title'), resourceType);
+    assert.equal(emptyState.dive().text(), `No ${resourceType} are available`);
+    assert.isTrue(message.hasClass('alert'));
+    assert.isTrue(message.hasClass('alert-info'));
   });
 
   test('that the loading indicator is shown when data is still loading', () => {
-    const tree = skinDeep.shallowRender(<MaybeList resources={[]} resourceType={resourceType} loading={true} />);
+    const wrapper = shallow(<MaybeList resources={[]} resourceType={resourceType} loading={true} />);
 
-    assert.isObject(tree.subTree('PageLoading'));
-    assert.isObject(tree.subTree('HelmetWrapper', {title: resourceType}));
-    assert.isFalse(tree.subTree('ConditionalList'));
+    assert.isTrue(wrapper.find('PageLoading').exists());
+    assert.equal(wrapper.find('HelmetWrapper').prop('title'), resourceType);
+    assert.isFalse(wrapper.find('ConditionalList').exists());
   });
 
   test('that list is rendered when not empty', () => {
     const resources = listOf(() => ({...simpleObject(), id: integer(), displayName: string()}));
 
-    const tree = skinDeep.shallowRender(React.createElement(MaybeList, {resources, resourceType, loading: false}));
-    const list = tree.dive(['ConditionalList']);
+    const wrapper = shallow(<MaybeList resources={resources} resourceType={resourceType} loading={false} />);
+    const list = wrapper.find('ConditionalList');
 
-    assert.isObject(tree.subTree('HelmetWrapper', {title: resourceType}));
-    assert.isObject(list.subTree('ResourceList', {resources}));
+    assert.equal(wrapper.find('HelmetWrapper').prop('title'), resourceType);
+    assert.equal(list.dive().find('ResourceList').prop('resources'), resources);
   });
 });

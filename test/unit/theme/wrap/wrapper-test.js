@@ -1,9 +1,7 @@
 import React from 'react';
-
 import {listOf, simpleObject, string} from '@travi/any';
 import {assert} from 'chai';
-import skinDeep from 'skin-deep';
-
+import {shallow} from 'enzyme';
 import {Wrap} from '../../../../src/main';
 
 suite('wrapper component', () => {
@@ -11,14 +9,13 @@ suite('wrapper component', () => {
     const primaryNav = listOf(() => ({...simpleObject(), path: string(), text: string()}));
     const children = 'foo';
 
-    const tree = skinDeep.shallowRender(React.createElement(Wrap, {primaryNav}, children));
-    const result = tree.getRenderOutput();
+    const wrapper = shallow(<Wrap primaryNav={primaryNav}>{children}</Wrap>);
+    const container = wrapper.find('div');
 
-    assert.equal(result.type, 'div');
-    assert.equal(result.props.className, 'container');
+    assert.isTrue(container.hasClass('container'));
 
-    assert.isObject(tree.subTree('HelmetWrapper', {titleTemplate: '%s | Travi.org Admin'}));
-    assert.isObject(tree.subTree('PrimaryNav', {primaryNav}));
-    assert.equal(tree.props.children[2], children);
+    assert.equal(wrapper.find('HelmetWrapper').prop('titleTemplate'), '%s | Travi.org Admin');
+    assert.equal(wrapper.find('PrimaryNav').prop('primaryNav'), primaryNav);
+    assert.equal(wrapper.childAt(2).text(), children);
   });
 });

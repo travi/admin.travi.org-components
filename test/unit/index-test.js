@@ -1,22 +1,19 @@
 import React from 'react';
-import cheerio from 'cheerio';
-import reactDom from 'react-dom/server';
 import {assert} from 'chai';
-import skinDeep from 'skin-deep';
-
+import {shallow} from 'enzyme';
 import {Index} from '../../src/main';
 
 suite('index', () => {
   test('that the proper content is displayed', () => {
-    const $ = cheerio.load(reactDom.renderToStaticMarkup(<Index />));
+    const wrapper = shallow(<Index />);
 
-    assert.equal($('h2').text(), 'Reference API Client');
-    assert.equal($('p').text(), 'Administration for Travi.org');
+    assert.equal(wrapper.find('h2').text(), 'Reference API Client');
+    assert.equal(wrapper.find('p').text(), 'Administration for Travi.org');
   });
 
   test('that the page title is set', () => {
-    const tree = skinDeep.shallowRender(<Index />);
+    const wrapper = shallow(<Index />);
 
-    assert.isObject(tree.subTree('HelmetWrapper', {title: 'Home'}));
+    assert.equal(wrapper.find('HelmetWrapper').prop('title'), 'Home');
   });
 });

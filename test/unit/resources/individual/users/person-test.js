@@ -1,14 +1,11 @@
 import React from 'react';
 import reactDom from 'react-dom/server';
 import Helmet from 'react-helmet';
-
 import cheerio from 'cheerio';
 import {shallow} from 'enzyme';
 import microformats from 'microformat-node';
 import {string, word, integer, url} from '@travi/any';
 import {assert} from 'chai';
-import skinDeep from 'skin-deep';
-
 import PageLoading from '../../../../../src/atoms/loading-indicators/page';
 import {Person} from '../../../../../src/main';
 
@@ -50,9 +47,9 @@ suite('person component test', () => {
   });
 
   test('that the page title is set', () => {
-    const tree = skinDeep.shallowRender(<Person person={person} />);
+    const wrapper = shallow(<Person person={person} />);
 
-    assert.isObject(tree.subTree('HelmetWrapper', {title: person.displayName}));
+    assert.equal(wrapper.find('HelmetWrapper').prop('title'), person.displayName);
   });
 
   test('that the loading indicator is shown when data is still loading', () => {

@@ -1,22 +1,19 @@
 import React from 'react';
-import cheerio from 'cheerio';
-import reactDom from 'react-dom/server';
 import {assert} from 'chai';
-import skinDeep from 'skin-deep';
-
+import {shallow} from 'enzyme';
 import {ServerError} from '../../../src/main';
 
-suite('server error', () => {
+suite('not found', () => {
   test('that the proper content is displayed', () => {
-    const $ = cheerio.load(reactDom.renderToStaticMarkup(<ServerError />));
+    const wrapper = shallow(<ServerError />);
 
-    assert.equal($('h2').text(), '500');
-    assert.equal($('p').text(), 'Server Error');
+    assert.equal(wrapper.find('h2').text(), '500');
+    assert.equal(wrapper.find('p').text(), 'Server Error');
   });
 
   test('that the page title is set', () => {
-    const tree = skinDeep.shallowRender(<ServerError />);
+    const wrapper = shallow(<ServerError />);
 
-    assert.isObject(tree.subTree('HelmetWrapper', {title: 'Server Error'}));
+    assert.equal(wrapper.find('HelmetWrapper').prop('title'), 'Server Error');
   });
 });

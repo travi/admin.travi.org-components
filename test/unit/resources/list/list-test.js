@@ -1,31 +1,23 @@
 import React from 'react';
-
-import skinDeep from 'skin-deep';
+import {Link} from 'react-router';
 import {assert} from 'chai';
+import {shallow} from 'enzyme';
 import {string, url, integer} from '@travi/any';
-
 import styles from '../../../helpers/style-fakes';
 import {ResourceList} from '../../../../src/main';
 
 function assertSimpleResourceRenders(listItem, resource) {
-  assert.deepEqual(listItem.props.children, ['', resource.displayName]);
+  assert.equal(listItem.children().text(), resource.displayName);
 }
 
 function assertLinkRendersWhenSelfLinkIsDefined(listItem, resource) {
-  assert.isObject(listItem.subTree('Link', {
-    to: resource.links.self.href,
-    children: resource.displayName,
-    onlyActiveOnIndex: false,
-    style: {}
-  }));
+  assert.isTrue(listItem.contains(<Link to={resource.links.self.href}>{resource.displayName}</Link>));
 }
 
 function assertThumbnailRendersWhenDefined(listItem, resource) {
-  assert.isObject(listItem.subTree('img', {
-    src: resource.thumbnail.src,
-    className: styles.thumbnail,
-    alt: `${resource.displayName}'s avatar`
-  }));
+  assert.isTrue(listItem.contains(
+    <img src={resource.thumbnail.src} className={styles.thumbnail} alt={`${resource.displayName}'s avatar`} />
+  ));
 }
 
 suite('resource list component', () => {
@@ -55,11 +47,11 @@ suite('resource list component', () => {
   ];
 
   test('that list renders', () => {
-    const tree = skinDeep.shallowRender(React.createElement(ResourceList, {resources}));
-    const trees = tree.everySubTree('ListGroupItem');
+    const wrapper = shallow(<ResourceList resources={resources} />);
+    const items = wrapper.find('ListGroupItem');
 
-    assertSimpleResourceRenders(trees[0], resources[0]);
-    assertLinkRendersWhenSelfLinkIsDefined(trees[1], resources[1]);
-    assertThumbnailRendersWhenDefined(trees[2], resources[2]);
+    assertSimpleResourceRenders(items.at(0), resources[0]);
+    assertLinkRendersWhenSelfLinkIsDefined(items.at(1), resources[1]);
+    assertThumbnailRendersWhenDefined(items.at(2), resources[2]);
   });
 });
