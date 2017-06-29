@@ -48,7 +48,7 @@
   "devDependencies": {
     "@storybook/addon-info": "3.1.6",
     "@storybook/react": "3.1.7",
-    "@travi/any": "1.1.0",
+    "@travi/any": "1.2.0",
     "@travi/eslint-config-travi": "1.2.11",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
