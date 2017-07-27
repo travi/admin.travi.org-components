@@ -71,7 +71,7 @@
     "gh-pages": "1.0.0",
     "glob": "7.1.1",
     "globstar": "1.0.0",
-    "greenkeeper-postpublish": "1.0.1",
+    "greenkeeper-postpublish": "1.1.0",
     "husky": "0.14.3",
     "jsdom": "11.1.0",
     "markdownlint-cli": "0.3.1",
