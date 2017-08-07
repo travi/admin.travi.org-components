@@ -86,7 +86,7 @@
     "react-test-renderer": "15.6.1",
     "rimraf": "2.6.1",
     "rollup": "0.45.2",
-    "rollup-plugin-babel": "3.0.0",
+    "rollup-plugin-babel": "3.0.1",
     "sass-lint": "1.10.2",
     "sass-loader": "6.0.6",
     "semantic-release": "6.3.6",
