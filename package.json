@@ -46,6 +46,7 @@
   "module": "lib/components.es.js",
   "devDependencies": {
     "@commitlint/cli": "3.1.2",
+    "@commitlint/config-angular": "3.1.1",
     "@storybook/addon-info": "3.2.4",
     "@storybook/react": "3.2.4",
     "@travi/any": "1.4.0",
