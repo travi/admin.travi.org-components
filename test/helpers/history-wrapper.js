@@ -19,6 +19,7 @@ export default class HistoryWrapper extends React.Component {
     return this.props.children;
   }
 }
+/* eslint-enable class-methods-use-this */
 
 HistoryWrapper.childContextTypes = {
   router: shape()
