@@ -45,7 +45,7 @@
   "main": "lib/components.cjs.js",
   "module": "lib/components.es.js",
   "devDependencies": {
-    "@storybook/addon-info": "3.2.5",
+    "@storybook/addon-info": "3.2.6",
     "@storybook/react": "3.2.5",
     "@travi/any": "1.4.0",
     "@travi/eslint-config-travi": "1.5.4",
