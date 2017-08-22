@@ -46,7 +46,7 @@
   "module": "lib/components.es.js",
   "devDependencies": {
     "@storybook/addon-info": "3.2.5",
-    "@storybook/react": "3.2.5",
+    "@storybook/react": "3.2.6",
     "@travi/any": "1.4.0",
     "@travi/eslint-config-travi": "1.5.4",
     "babel-cli": "6.26.0",
