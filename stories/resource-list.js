@@ -4,8 +4,7 @@ import {withInfo} from '@storybook/addon-info';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {mount} from 'enzyme';
 import {assert} from 'chai';
-import any from '@travi/any';
-import {storiesOf, specs} from '../.storybook/facade-storybook';
+import {storiesOf, linkTo, specs} from '../.storybook/facade-storybook';
 import {describe, it} from '../.storybook/facade-mocha';
 import ResourceList from '../src/resources/list/maybe-list';
 
@@ -15,7 +14,10 @@ storiesOf('Resource List', module)
       {story()}
     </MuiThemeProvider>
   ))
-  .addDecorator(storyRouter())
+  .addDecorator(storyRouter({
+    '/users/travi': linkTo('Resource Details', 'person'),
+    '/resources/generic': linkTo('Resource Details', 'generic resource')
+  }))
   .add(
     'empty list',
     withInfo('this is the empty state')(() => {
@@ -44,9 +46,9 @@ storiesOf('Resource List', module)
         resourceType="rides"
         loading={false}
         resources={[
-          {id: 1, displayName: 'corvette', links: {self: {href: any.url()}}},
-          {id: 2, displayName: 'truck', links: {self: {href: any.url()}}},
-          {id: 3, displayName: 'camaro', links: {self: {href: any.url()}}}
+          {id: 1, displayName: 'corvette', links: {self: {href: '/resources/generic'}}},
+          {id: 2, displayName: 'truck', links: {self: {href: '/resources/generic'}}},
+          {id: 3, displayName: 'camaro', links: {self: {href: '/resources/generic'}}}
         ]}
       />
     ))
@@ -62,7 +64,7 @@ storiesOf('Resource List', module)
             id: 1,
             displayName: 'Matt Travi',
             thumbnail: {src: 'https://www.gravatar.com/avatar/f69785efc7d990da20f1ab49fc2a6648?size=32'},
-            links: {}
+            links: {self: {href: '/users/travi'}}
           }
         ]}
       />
