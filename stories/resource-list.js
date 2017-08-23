@@ -1,5 +1,6 @@
 import React from 'react';
 import storyRouter from 'storybook-router';
+import {withInfo} from '@storybook/addon-info';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {mount} from 'enzyme';
 import {assert} from 'chai';
@@ -15,10 +16,9 @@ storiesOf('Resource List', module)
     </MuiThemeProvider>
   ))
   .addDecorator(storyRouter())
-  .addWithInfo(
+  .add(
     'empty list',
-    'this is the empty state',
-    () => {
+    withInfo('this is the empty state')(() => {
       const list = <ResourceList resourceType="foo" resources={[]} loading={false} />;
 
       specs(() => describe('empty list', () => {
@@ -31,17 +31,15 @@ storiesOf('Resource List', module)
       }));
 
       return list;
-    }
+    })
   )
-  .addWithInfo(
+  .add(
     'loading',
-    'this is the loading state',
-    () => <ResourceList resourceType="foo" resources={[]} loading={true} />
+    withInfo('this is the loading state')(() => <ResourceList resourceType="foo" resources={[]} loading={true} />)
   )
-  .addWithInfo(
+  .add(
     'rides list',
-    'list of rides',
-    () => (
+    withInfo('list of rides')(() => (
       <ResourceList
         resourceType="rides"
         loading={false}
@@ -51,12 +49,11 @@ storiesOf('Resource List', module)
           {id: 3, displayName: 'camaro', links: {self: {href: any.url()}}}
         ]}
       />
-    )
+    ))
   )
-  .addWithInfo(
+  .add(
     'users list',
-    'list of users',
-    () => (
+    withInfo('list of users')(() => (
       <ResourceList
         resourceType="users"
         loading={false}
@@ -69,5 +66,5 @@ storiesOf('Resource List', module)
           }
         ]}
       />
-    )
+    ))
   );
