@@ -52,10 +52,10 @@ storiesOf('Resource List', module)
     ))
   )
   .add(
-    'users list',
-    withInfo('list of users')(() => (
+    'persons list',
+    withInfo('list of persons')(() => (
       <ResourceList
-        resourceType="users"
+        resourceType="persons"
         loading={false}
         resources={[
           {
