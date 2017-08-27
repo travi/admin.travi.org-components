@@ -88,7 +88,7 @@
     "rimraf": "2.6.1",
     "rollup": "0.48.2",
     "rollup-plugin-babel": "3.0.2",
-    "sass-lint": "1.10.2",
+    "sass-lint": "1.11.0",
     "sass-loader": "6.0.6",
     "semantic-release": "7.0.2",
     "storybook-addon-specifications": "2.1.1",
