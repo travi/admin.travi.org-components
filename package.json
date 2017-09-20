@@ -50,7 +50,7 @@
     "@storybook/addon-links": "3.2.0",
     "@storybook/react": "3.2.8",
     "@travi/any": "1.4.2",
-    "@travi/eslint-config-travi": "1.5.7",
+    "@travi/eslint-config-travi": "1.5.8",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
