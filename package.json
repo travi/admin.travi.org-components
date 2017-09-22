@@ -48,7 +48,7 @@
     "@storybook/addon-actions": "3.2.0",
     "@storybook/addon-info": "3.2.9",
     "@storybook/addon-links": "3.2.0",
-    "@storybook/react": "3.2.8",
+    "@storybook/react": "3.2.10",
     "@travi/any": "1.4.2",
     "@travi/eslint-config-travi": "1.5.7",
     "babel-cli": "6.26.0",
