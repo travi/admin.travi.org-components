@@ -68,7 +68,7 @@
     "cpy-cli": "1.0.1",
     "css-loader": "0.28.7",
     "cz-conventional-changelog": "2.0.0",
-    "enzyme": "2.9.1",
+    "enzyme": "3.0.0",
     "file-loader": "1.0.0",
     "gh-pages": "1.0.0",
     "glob": "7.1.2",
