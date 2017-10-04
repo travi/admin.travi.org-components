@@ -94,7 +94,7 @@
     "storybook-addon-specifications": "2.1.1",
     "storybook-router": "0.2.9",
     "style-loader": "0.18.2",
-    "url-loader": "0.5.9",
+    "url-loader": "0.6.1",
     "webpack-hot-middleware": "2.19.1"
   },
   "dependencies": {
