@@ -1,9 +1,13 @@
 import {JSDOM} from 'jsdom';
+import {configure} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import {storiesOf, specs} from './storybook-stub';
 import * as storybookFacade from './facade-storybook';
 
 storybookFacade.storiesOf = storiesOf;
 storybookFacade.specs = specs;
+
+configure({adapter: new Adapter()});
 
 function setupDom() {
   const jsdom = new JSDOM('<!doctype html><html><body></body></html>');

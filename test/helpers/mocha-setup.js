@@ -1,4 +1,8 @@
+import {configure} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import styles from './style-fakes';
+
+configure({adapter: new Adapter()});
 
 require.extensions['.scss'] = module => {
   module.exports = styles;    // eslint-disable-line no-param-reassign
