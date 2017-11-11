@@ -87,7 +87,7 @@
     "react-helmet": "5.2.0",
     "react-test-renderer": "16.1.0",
     "rimraf": "2.6.2",
-    "rollup": "0.51.3",
+    "rollup": "0.51.4",
     "rollup-plugin-babel": "3.0.2",
     "sass-lint": "1.12.1",
     "sass-loader": "6.0.6",
