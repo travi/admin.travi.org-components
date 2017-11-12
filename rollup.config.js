@@ -1,4 +1,4 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+/* eslint import/no-extraneous-dependencies: ['error', {'devDependencies': true}] */
 import babel from 'rollup-plugin-babel';
 import glob from 'glob';
 
@@ -19,7 +19,7 @@ export default {
     babel({
       babelrc: false,
       exclude: ['./node_modules/**'],
-      presets: ['react', 'es2015-rollup'],
+      presets: [['env', {targets: {node: 'current', browsers: ['last 2 versions']}, modules: false}], 'react'],
       plugins: [['transform-react-remove-prop-types', {mode: 'wrap'}]]
     })
   ],
