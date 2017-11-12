@@ -3,8 +3,8 @@ import babel from 'rollup-plugin-babel';
 import glob from 'glob';
 
 export default {
-  entry: 'src/main.js',
-  sourceMap: true,
+  input: 'src/main.js',
+  sourcemap: true,
   external: [
     ...glob.sync('**/*.scss', {cwd: 'src'}).map(file => require.resolve(`${__dirname}/src/${file}`)),
     'react',
@@ -12,6 +12,7 @@ export default {
     'react-router',
     'react-bootstrap',
     'react-router-bootstrap',
+    'prop-types',
     'material-ui/CircularProgress'
   ],
   plugins: [
@@ -22,8 +23,8 @@ export default {
       plugins: [['transform-react-remove-prop-types', {mode: 'wrap'}]]
     })
   ],
-  targets: [
-    {dest: 'lib/components.cjs.js', format: 'cjs'},
-    {dest: 'lib/components.es.js', format: 'es'}
+  output: [
+    {file: 'lib/components.cjs.js', format: 'cjs'},
+    {file: 'lib/components.es.js', format: 'es'}
   ]
 };
