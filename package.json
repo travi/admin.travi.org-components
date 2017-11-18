@@ -61,7 +61,7 @@
     "babel-register": "6.26.0",
     "chai": "4.1.2",
     "cheerio": "1.0.0-rc.2",
-    "commitlint-config-travi": "1.2.7",
+    "commitlint-config-travi": "1.2.8",
     "coveralls": "3.0.0",
     "cpy-cli": "1.0.1",
     "css-loader": "0.28.7",
