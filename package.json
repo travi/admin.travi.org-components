@@ -68,7 +68,7 @@
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.2.0",
     "enzyme-adapter-react-16": "1.1.0",
-    "file-loader": "1.1.5",
+    "file-loader": "1.1.6",
     "gh-pages": "1.1.0",
     "glob": "7.1.2",
     "globstar": "1.0.0",
