@@ -78,7 +78,7 @@
     "mocha": "4.0.1",
     "node-sass": "4.7.2",
     "npm-run-all": "4.1.2",
-    "nyc": "11.3.0",
+    "nyc": "11.4.1",
     "prop-types": "15.6.0",
     "react": "16.2.0",
     "react-addons-test-utils": "15.6.2",
