@@ -45,7 +45,7 @@
   "main": "lib/components.cjs.js",
   "module": "lib/components.es.js",
   "devDependencies": {
-    "@storybook/addon-actions": "3.2.19",
+    "@storybook/addon-actions": "3.3.0",
     "@storybook/addon-info": "3.2.15",
     "@storybook/addon-links": "3.2.19",
     "@storybook/react": "3.2.15",
