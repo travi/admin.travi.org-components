@@ -64,7 +64,7 @@
     "commitlint-config-travi": "1.2.19",
     "coveralls": "3.0.0",
     "cpy-cli": "1.0.1",
-    "css-loader": "0.28.7",
+    "css-loader": "0.28.8",
     "cz-conventional-changelog": "2.1.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
