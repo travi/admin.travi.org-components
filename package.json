@@ -17,7 +17,7 @@
     "build:js": "rollup -c",
     "build": "run-s clean build:* copy:scss",
     "build-storybook": "build-storybook -o dist/storybook",
-    "deploy": "NODE_DEBUG=gh-pages gh-pages -r \"https://$GH_TOKEN@github.com/travi/admin.travi.org-components.git\" -d dist/storybook/",
+    "deploy": "NODE_DEBUG=gh-pages gh-pages -r \"https://$GH_TOKEN@github.com/travi-org/admin.travi.org-components.git\" -d dist/storybook/",
     "preversion": "npm test",
     "prepublish": "run-s build",
     "precommit": "npm test",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/travi/admin.travi.org-components.git"
+    "url": "git+https://github.com/travi-org/admin.travi.org-components.git"
   },
   "keywords": [
     "react",
@@ -39,9 +39,9 @@
   "author": "Matt Travi <npm@travi.org> (https://matt.travi.org/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/travi/admin.travi.org-components/issues"
+    "url": "https://github.com/travi-org/admin.travi.org-components/issues"
   },
-  "homepage": "https://github.com/travi/admin.travi.org-components#readme",
+  "homepage": "https://github.com/travi-org/admin.travi.org-components#readme",
   "main": "lib/components.cjs.js",
   "module": "lib/components.es.js",
   "devDependencies": {
