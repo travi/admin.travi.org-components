@@ -7,9 +7,7 @@ branches:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
 before_script: npm run greenkeeper:update-lockfile
 after_script: npm run greenkeeper:upload-lockfile
-after_success:
-- npm run report-coverage
-- npm run semantic-release
+after_success: npm run report-coverage
 before_deploy:
 - npm run build-storybook
 - git config --global user.name "$GIT_NAME"
@@ -18,6 +16,9 @@ deploy:
 - skip_cleanup: true
   provider: script
   script: npm run deploy
+- skip_cleanup: true
+  provider: script
+  script: npm run semantic-release
 env:
   global:
   - secure: k/Sd6YpTUriT/d2+A/2BeSV11KtWwkokCtUR+oEOKybsUye6eYd0yLu6Dgg6rDXNq+QmTwKNMGRGGNNpta3dgij75Kb6vQtS3NquZem9fr8ECECiRYgqeqJnvjvyoF40K3LcYdnzsGKk/m3nqb8R1xGfkeazwPgkp3mx4HC6wfsbpZ0ylEZd4grl/1n1NOXWcxVhhPK/tYG4ThDfGHhBKnCpaVBZ2ZHw46D/1yf2/zD0zNCvsWVg8LVa+uhHxvngkFqd+g9CyLQXQHeo6qHO8++zfN3xAqvFD4up75R32u/ypOFxqA67X6ce59APzgA5X8UQBfR0SzkBWnsCDCqUvFdB+WrHV3goWn0qcJ0vmhfGpal8EQncP9/sw1klcLA3O+gWWCBmEgUwmzZYwNcCuhtvwRd/1DKvcKfm9jHYq95fpJjYQUt6jJ9lpAuK0BArJSzpBqvSZGtH5SThnHmL3stJSO+dbq/PeI24EisHEnkC7XzP3a0hrM1te6rrNqNeCzb61Z1QePApflwc+8ocPsnj4pE6qpDLa6W2pd92mAoX8q+kHmIDl46H534fVvgoSSIkGKZYpANYbLeenJxchVfYk6CZfkBzbjzJMzgq/2zVbZ9NslIv29YvcliGNedNzpMhAj6G56QznQniWeERqQ6s6i1h6VM4gPpsJyTepvQ=
