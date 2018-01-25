@@ -22,7 +22,9 @@
     "prepublish": "run-s build",
     "precommit": "npm test",
     "commitmsg": "commitlint -e",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "greenkeeper:update-lockfile": "greenkeeper-lockfile-update",
+    "greenkeeper:upload-lockfile": "greenkeeper-lockfile-upload"
   },
   "publishConfig": {
     "access": "public"
@@ -72,6 +74,7 @@
     "gh-pages": "1.1.0",
     "glob": "7.1.2",
     "globstar": "1.0.0",
+    "greenkeeper-lockfile": "1.13.1",
     "husky": "0.14.3",
     "jsdom": "11.6.1",
     "markdownlint-cli": "0.6.0",
