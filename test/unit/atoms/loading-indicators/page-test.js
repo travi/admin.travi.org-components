@@ -8,8 +8,8 @@ suite('page loading indicator', () => {
   test('that it renders', () => {
     const wrapper = shallow(<PageLoading />);
 
-    assert.isTrue(wrapper.contains(
-      <CircularProgress color={'#c80000'} style={{margin: '10px auto', display: 'block'}} />
-    ));
+    assert.isTrue(wrapper.contains((
+      <CircularProgress color="#c80000" style={{margin: '10px auto', display: 'block'}} />
+    )));
   });
 });

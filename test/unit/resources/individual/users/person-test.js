@@ -25,9 +25,7 @@ suite('person component test', () => {
 
   test('that the resource is displayed', () => {
     const data = {person};
-    const $ = cheerio.load(reactDom.renderToStaticMarkup(
-      <Person {...data} loading={false} />
-    ));
+    const $ = cheerio.load(reactDom.renderToStaticMarkup(<Person {...data} loading={false} />));
     const $avatar = $('div.resource img');
 
     assert.equal($('div.resource > h3').text(), data.person.displayName);

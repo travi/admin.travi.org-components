@@ -15,9 +15,9 @@ suite('primary navigation', () => {
       path: url()
     }));
 
-    const $ = cheerio.load(dom.renderToStaticMarkup(
+    const $ = cheerio.load(dom.renderToStaticMarkup((
       <HistoryWrapper><PrimaryNav primaryNav={primaryNav} /></HistoryWrapper>
-    ));
+    )));
     const $items = $('li');
 
     assert.equal($('nav').length, 1);

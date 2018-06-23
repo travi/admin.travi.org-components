@@ -15,9 +15,9 @@ function assertLinkRendersWhenSelfLinkIsDefined(listItem, resource) {
 }
 
 function assertThumbnailRendersWhenDefined(listItem, resource) {
-  assert.isTrue(listItem.contains(
+  assert.isTrue(listItem.contains((
     <img src={resource.thumbnail.src} className={styles.thumbnail} alt={`${resource.displayName}'s avatar`} />
-  ));
+  )));
 }
 
 suite('resource list component', () => {
