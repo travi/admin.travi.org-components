@@ -4,7 +4,6 @@ import glob from 'glob';
 
 export default {
   input: 'src/main.js',
-  sourcemap: true,
   external: [
     ...glob.sync('**/*.scss', {cwd: 'src'}).map(file => require.resolve(`${__dirname}/src/${file}`)),
     'react',
@@ -24,7 +23,7 @@ export default {
     })
   ],
   output: [
-    {file: 'lib/components.cjs.js', format: 'cjs'},
-    {file: 'lib/components.es.js', format: 'es'}
+    {file: 'lib/components.cjs.js', format: 'cjs', sourcemap: true},
+    {file: 'lib/components.es.js', format: 'es', sourcemap: true}
   ]
 };
