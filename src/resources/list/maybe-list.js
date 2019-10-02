@@ -3,14 +3,18 @@ import {string, bool} from 'prop-types';
 import Helmet from 'react-helmet';
 import ResourceList from './list';
 import {resourcesShape} from '../resource-shapes';
-import PageLoading from '../../../src/atoms/loading-indicators/page';
+import PageLoading from '../../atoms/loading-indicators/page';
 
 function ConditionalList({resources, resourceType}) {
   if (resources.length) {
     return <ResourceList resources={resources} />;
   }
 
-  return <p className="alert alert-info">No { resourceType } are available</p>;
+  return (
+    <p className="alert alert-info">
+      {`No ${resourceType} are available`}
+    </p>
+  );
 }
 
 ConditionalList.displayName = 'ConditionalList';

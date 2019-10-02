@@ -24,23 +24,22 @@ suite('person component test', () => {
   };
 
   test('that the resource is displayed', () => {
-    const data = {person};
-    const $ = cheerio.load(reactDom.renderToStaticMarkup(<Person {...data} loading={false} />));
+    const $ = cheerio.load(reactDom.renderToStaticMarkup(<Person person={person} loading={false} />));
     const $avatar = $('div.resource img');
 
-    assert.equal($('div.resource > h3').text(), data.person.displayName);
-    assert.equal($avatar.attr('src'), data.person.avatar.src);
-    assert.equal($avatar.attr('alt'), data.person.displayName);
-    assert.equal($avatar.attr('height'), data.person.avatar.size);
-    assert.equal($avatar.attr('width'), data.person.avatar.size);
+    assert.equal($('div.resource > h3').text(), person.displayName);
+    assert.equal($avatar.attr('src'), person.avatar.src);
+    assert.equal($avatar.attr('alt'), person.displayName);
+    assert.equal($avatar.attr('height'), person.avatar.size);
+    assert.equal($avatar.attr('width'), person.avatar.size);
 
     microformats.get({node: $}, (err, mformats) => {
       const hCard = mformats.items[0];
-      assert.equal(hCard.properties.name, data.person.displayName);
-      assert.equal(hCard.properties.photo, data.person.avatar.src);
-      assert.equal(hCard.properties.nickname, data.person.id);
-      assert.equal(hCard.properties['given-name'], data.person.name.first);
-      assert.equal(hCard.properties['family-name'], data.person.name.last);
+      assert.equal(hCard.properties.name, person.displayName);
+      assert.equal(hCard.properties.photo, person.avatar.src);
+      assert.equal(hCard.properties.nickname, person.id);
+      assert.equal(hCard.properties['given-name'], person.name.first);
+      assert.equal(hCard.properties['family-name'], person.name.last);
     });
   });
 
