@@ -5,8 +5,6 @@ notifications:
 branches:
   except:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
-before_script: npm run greenkeeper:update-lockfile
-after_script: npm run greenkeeper:upload-lockfile
 after_success: npm run report-coverage
 before_deploy:
 - git config --global user.name "$GIT_NAME"
