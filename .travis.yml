@@ -4,7 +4,7 @@ dist: trusty
 notifications:
   email: false
 import:
-  - source: traci-org/.travis-ci:authenticated-semantic-release.yml
+  - source: travi-org/.travis-ci:authenticated-semantic-release.yml
 after_success: npm run report-coverage
 before_deploy:
 - git config --global user.name "$GIT_NAME"
