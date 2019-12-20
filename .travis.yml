@@ -1,10 +1,10 @@
+version: ~> 1.0
 language: node_js
 dist: trusty
 notifications:
   email: false
-branches:
-  except:
-  - "/^v\\d+\\.\\d+\\.\\d+$/"
+import:
+  - source: traci-org/.travis-ci:authenticated-semantic-release.yml
 after_success: npm run report-coverage
 before_deploy:
 - git config --global user.name "$GIT_NAME"
@@ -13,9 +13,6 @@ deploy:
 - skip_cleanup: true
   provider: script
   script: npm run deploy
-- skip_cleanup: true
-  provider: script
-  script: npm run semantic-release
 env:
   global:
   - FORCE_COLOR=1
