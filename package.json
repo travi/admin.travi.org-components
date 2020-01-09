@@ -69,7 +69,7 @@
     "gh-pages": "^2.1.1",
     "glob": "^7.1.4",
     "globstar": "1.0.0",
-    "husky": "^3.0.7",
+    "husky": "^4.0.3",
     "jsdom": "^15.1.1",
     "markdownlint-cli": "^0.21.0",
     "mocha": "^5.0.0",
