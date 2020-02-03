@@ -10,7 +10,7 @@
     "lint:sass": "sass-lint src/**/*.scss",
     "test": "npm-run-all --print-label --parallel lint:* --parallel test:* --sequential build",
     "test:unit": "nyc run-s test:unit:base",
-    "test:unit:base": "mocha --recursive test/unit --require ./test/helpers/mocha-setup.js",
+    "test:unit:base": "mocha --recursive test/unit --require @babel/register --require ./test/helpers/mocha-setup.js",
     "test:integration": "mocha stories/ --require @babel/register --require .storybook/mocha-config.js",
     "report-coverage": "nyc report --reporter=text-lcov | coveralls",
     "start": "start-storybook -p 9002",
