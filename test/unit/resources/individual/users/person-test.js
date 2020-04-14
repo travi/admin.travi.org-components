@@ -1,6 +1,6 @@
 import React from 'react';
 import reactDom from 'react-dom/server';
-import Helmet from 'react-helmet';
+import {Helmet} from 'react-helmet';
 import cheerio from 'cheerio';
 import {shallow} from 'enzyme';
 import microformats from 'microformat-node';

@@ -1,6 +1,6 @@
 import React from 'react';
 import {bool} from 'prop-types';
-import Helmet from 'react-helmet';
+import {Helmet} from 'react-helmet';
 import PageLoading from '../../atoms/loading-indicators/page';
 import {resourceShape} from '../resource-shapes';
 

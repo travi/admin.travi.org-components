@@ -1,6 +1,6 @@
 import React from 'react';
 import {bool, shape, string} from 'prop-types';
-import Helmet from 'react-helmet';
+import {Helmet} from 'react-helmet';
 import PageLoading from '../../../atoms/loading-indicators/page';
 
 import styles from './_h-card.scss';
