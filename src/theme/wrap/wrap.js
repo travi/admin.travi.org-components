@@ -1,6 +1,6 @@
 import React from 'react';
 import {arrayOf, shape, string, node} from 'prop-types';
-import Helmet from 'react-helmet';
+import {Helmet} from 'react-helmet';
 
 import PrimaryNav from '../nav/primary-nav';
 
