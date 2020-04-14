@@ -1,14 +1,26 @@
 # React components for <https://admin.travi.org>
 
-[![npm](https://img.shields.io/npm/v/@travi/admin.travi.org-components.svg?maxAge=2592000)](https://www.npmjs.com/package/@travi/admin.travi.org-components)
-[![license](https://img.shields.io/github/license/travi-org/admin.travi.org-components.svg)](LICENSE)
+<!--status-badges start -->
 
 [![Build Status](https://img.shields.io/travis/com/travi-org/admin.travi.org-components.svg?style=flat)](https://travis-ci.com/travi-org/admin.travi.org-components)
 [![Coverage Status](http://img.shields.io/coveralls/travi-org/admin.travi.org-components.svg?style=flat)](https://coveralls.io/r/travi-org/admin.travi.org-components?branch=master)
 
+<!--status-badges end -->
+
+<!--consumer-badges start -->
+
+[![npm](https://img.shields.io/npm/v/@travi/admin.travi.org-components.svg?maxAge=2592000)](https://www.npmjs.com/package/@travi/admin.travi.org-components)
+[![license](https://img.shields.io/github/license/travi-org/admin.travi.org-components.svg)](LICENSE)
+
+<!--consumer-badges end -->
+
+<!--contribution-badges start -->
+
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Greenkeeper badge](https://badges.greenkeeper.io/travi-org/admin.travi.org-components.svg)](https://greenkeeper.io/)
+
+<!--contribution-badges end -->
 
 ## Install
 
