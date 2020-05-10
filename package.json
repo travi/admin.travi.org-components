@@ -67,7 +67,7 @@
     "enzyme-adapter-react-16": "1.15.2",
     "file-loader": "6.0.0",
     "gh-pages": "2.2.0",
-    "glob": "7.1.4",
+    "glob": "7.1.6",
     "globstar": "1.0.0",
     "husky": "4.2.5",
     "jsdom": "16.0.1",
