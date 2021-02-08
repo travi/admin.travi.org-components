@@ -67,7 +67,7 @@
     "file-loader": "6.2.0",
     "glob": "7.1.6",
     "globstar": "1.0.0",
-    "husky": "5.0.8",
+    "husky": "5.0.9",
     "jsdom": "16.4.0",
     "markdownlint-cli": "0.26.0",
     "mocha": "8.2.1",
