@@ -68,7 +68,7 @@
     "glob": "7.1.7",
     "globstar": "1.0.0",
     "husky": "6.0.0",
-    "jsdom": "16.5.3",
+    "jsdom": "16.6.0",
     "markdownlint-cli": "0.27.1",
     "mocha": "8.4.0",
     "node-sass": "6.0.0",
